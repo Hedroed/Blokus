@@ -1,0 +1,39 @@
+<project name="jesuistropfort" default="run" basedir=".">
+	
+	<property name="class" location="class"/>
+	<property name="src" location="src"/>
+	<property name="resources" location="resources"/>
+	
+	<target name="init">
+		<!-- Create the time stamp -->
+		<tstamp/>
+		<!-- Create the build directory structure used by compile -->
+		<mkdir dir="${class}"/>
+    </target>
+	
+	<target name="compile">
+		<javac includeantruntime="false" srcdir="${src}" destdir="${class}"/>
+		
+		<copydir src="${resources}" dest="${class}"/>
+	</target>
+	
+	<target name="run" depends="compile">
+		<java classPath="${class}" className="ihm.Fenetre" fork="true"/>
+	</target>
+	
+	<target name="javadoc" >
+		<mkdir dir="javadoc"/>
+		
+		<javadoc sourcepath="src" destdir="javadoc" author="true" version="true" use="true"/>
+	</target>	
+
+	<target name="jar" depends="init">
+		<mkdir dir="jar"/>
+		<jar destfile="jar/project-${DSTAMP}.jar" basedir="${class}">
+            <manifest>
+                <attribute name="Main-Class" value="main.Fenetre"/>
+            </manifest>
+        </jar>
+    </target>
+	
+</project>
