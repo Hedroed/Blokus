@@ -1,0 +1,2 @@
+# Blokus
+A blokus game
