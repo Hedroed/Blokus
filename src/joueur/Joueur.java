@@ -39,8 +39,7 @@ public class Joueur {
 	  * @return un boolean
 	  */
 	public boolean isIA() {
-		// TODO - implement Joueur.isIA
-		throw new UnsupportedOperationException();
+
 		return false;
 	}
 
