@@ -6,11 +6,19 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.FloatControl;
 
+
+/**
+*Classe qui permet de jouer des pistes audio
+*/
 public class PlaySound {
 	
 	private Clip clip;
 	private FloatControl gainControl;
 	
+	/**
+	*Constructeur de la classe PlaySound
+	*@Param s, le nom de la piste audio
+	*/
 	public PlaySound(String s) {
 		
 		File file = new File(s);
@@ -26,11 +34,20 @@ public class PlaySound {
 		gainControl.setValue(-20f);
 	}
 	
+	/**
+	*Constructeur de la classe PlaySound avec precision du volume
+	*@Param s, le nom de la piste audio
+	*@Param volume, l'intensite sonore a laquelle va etre jouee la piste
+	*/
 	public PlaySound(String s, int volume) {
 		this(s);
 		gainControl.setValue((float)volume);
 	}
 	
+	/**
+	*Modifie le volume de la piste audio
+	*@Param volume, le nouveau volume
+	*/
 	public void setVolume(int volume) {
 		// System.out.println("vol :"+volume);
 		if(volume > -60 && volume <= 5) {
@@ -45,12 +62,19 @@ public class PlaySound {
 		}
 	}
 	
+	
+	/**
+	*Stoppe la diffusion de la piste audio
+	*/
 	public void stop() {
 		if(clip.isRunning()) {
 			clip.stop();
 		}
 	}
 	
+	/**
+	*Joue la piste audio
+	*/
 	public void play() {
 		
 		if(clip != null) {
@@ -60,6 +84,9 @@ public class PlaySound {
 		}
 	}
 	
+	/**
+	*Joue la piste audio en boucle
+	*/
 	public void playContinuously() {
 		if(clip != null && !clip.isRunning()) {
 			stop();
@@ -68,12 +95,18 @@ public class PlaySound {
 		}
 	}
 	
+	/**
+	*ferme le lecteur du clip
+	*/
 	public void close() {
 		if(clip != null) {
 			clip.close();
 		}
 	}
 	
+	/**
+	*Retourne vrai si la piste est en train d'etre jouee, faux sinon
+	*/
 	public boolean isRunning() {
 		return clip.isRunning();
 	}
