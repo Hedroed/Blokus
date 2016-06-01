@@ -23,6 +23,18 @@ public class Bloc {
 		
 	}
 	
+	public Bloc(Couleur couleur) {
+		
+		this(couleur,0,0);
+		
+	}
+	
+	public boolean equals(Bloc autre) {
+		
+		return this.couleur.equals(autre.couleur);
+		
+	}
+	
 	// accesseur / modifieur
 	public int getPosX() {
 		return this.posX;

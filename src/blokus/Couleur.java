@@ -16,6 +16,10 @@ public class Couleur {
 		
 	}
 	
+	public boolean equals(Couleur autre) {
+		return this.nom.equals(autre.nom);
+	}
+	
 	/**
 	 * Retourne la couleur sous forme de String
 	 */
