@@ -5,7 +5,7 @@ package blokus;
   */
 public class Bloc {
 
-	private Couleur couleur;
+	private String couleur;
 	private int posX;
 	private int posY;
 	
@@ -15,7 +15,9 @@ public class Bloc {
 	  * @param x ca position en x sur le plateau
 	  * @param y ca position en y sur le plateau
 	  */
-	public Bloc(Couleur couleur, int x, int y) {
+	public Bloc(String couleur, int x, int y) {
+		
+		if(!Couleur.estCouleur(couleur)) {throw new IllegalArgumentException("Cette couleur n'existe pas");}
 		
 		this.couleur = couleur;
 		this.posX = x;
@@ -23,7 +25,7 @@ public class Bloc {
 		
 	}
 	
-	public Bloc(Couleur couleur) {
+	public Bloc(String couleur) {
 		
 		this(couleur,0,0);
 		
@@ -52,11 +54,11 @@ public class Bloc {
 		this.posY = y;
 	}
 
-	public Couleur getCouleur() {
+	public String getCouleur() {
 		return this.couleur;
 	}
 
-	public void setCouleur(Couleur c) {
+	public void setCouleur(String c) {
 		this.couleur = c;
 	}
 

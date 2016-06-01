@@ -3,28 +3,26 @@ package blokus;
 /**
   * Definie une couleur graphique, elle permet aussi de determiner la couleur d'un joueur ou d'un bloc
   */
-public class Couleur {
-
-	private String nom;
+public final class Couleur {
 	
-	/**
-	  * Constructeur prend le nom de sa couleur
-	  */
-	public Couleur(String c) {
+	public static final String BLEU = "bleu";
+	public static final String ROUGE = "rouge";
+	public static final String VERT = "vert";
+	public static final String JAUNE = "jaune";
+	
+	public static boolean estCouleur(String s) {
+		boolean ret = false;
 		
-		nom = c;
+		if(s != null) {
+			
+			if(s.equals(BLEU)) {ret = true;}
+			else if(s.equals(ROUGE)) {ret = true;}
+			else if(s.equals(VERT)) {ret = true;}
+			else if(s.equals(JAUNE)) {ret = true;}
+			
+		}
 		
-	}
-	
-	public boolean equals(Couleur autre) {
-		return this.nom.equals(autre.nom);
-	}
-	
-	/**
-	 * Retourne la couleur sous forme de String
-	 */
-	public String toString() {
-		return nom;
+		return ret;
 	}
 
 }

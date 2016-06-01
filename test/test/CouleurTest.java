@@ -8,21 +8,11 @@ import static org.junit.Assert.*;
 public class CouleurTest {
   
 	@Test
-	public void testConstructor() {
-	
-		Couleur c = new Couleur("lapin");
+	public void testEstCouleur() {
 		
-		assertNotNull(c);
-	}
-	
-	@Test
-	public void testToString() {
-	
-		Couleur c = new Couleur("vert");
+		assertTrue(Couleur.estCouleur(Couleur.ROUGE));
 		
-		assertEquals(c.toString(),"vert");
+		assertFalse(Couleur.estCouleur("cheval"));
 	}
-	
-	
   
 }
