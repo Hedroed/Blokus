@@ -6,6 +6,10 @@ import java.util.*;
 import java.awt.event.*;
 import javax.swing.JFrame;
 
+/**
+*Le JFrame qui contient le jeu.
+*@Author LAY
+*/
 public class Fenetre extends JFrame {
 
 	private Collection<AbstractFenetre> fenetres;
@@ -17,7 +21,7 @@ public class Fenetre extends JFrame {
 	private int fentreAffiche;
 
 	/**
-	 * 
+	 * Rend la fenetre active
 	 * @param fCode
 	 */
 	public void setFenetreActive(int fCode) {
@@ -26,8 +30,8 @@ public class Fenetre extends JFrame {
 	}
 
 	/**
-	 * 
-	 * @param moteur
+	 * Constructeur de la fenetre
+	 * @param moteur, le moteur du jeu.
 	 */
 	public Fenetre(Moteur moteur) {
 		// TODO - implement Fenetre.Fenetre
@@ -35,7 +39,7 @@ public class Fenetre extends JFrame {
 	}
 
 	/**
-	 * 
+	 * Detecte quand un clic est effectue dans la fenetre
 	 * @param e
 	 */
 	public void mousePressed(MouseEvent e) {
@@ -52,6 +56,10 @@ public class Fenetre extends JFrame {
 		throw new UnsupportedOperationException();
 	}
 	
+	/**
+	*Methode principale
+	*@Author LAY
+	*/
 	public static void main(String[] args) {
 		System.out.println("it working");
 	}

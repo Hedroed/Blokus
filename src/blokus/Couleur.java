@@ -1,23 +1,26 @@
 package blokus;
 
-import java.awt.Color;
-import java.awt.Image;
-import java.awt.Graphics;
-
+/**
+  * Definie une couleur graphique, elle permet aussi de determiner la couleur d'un joueur ou d'un bloc
+  */
 public class Couleur {
 
-	private Color couleur;
-	private Image img;
-
+	private String nom;
+	
 	/**
-	 * 
-	 * @param g
-	 * @param posX
-	 * @param posY
+	  * Constructeur prend le nom de sa couleur
+	  */
+	public Couleur(String c) {
+		
+		nom = c;
+		
+	}
+	
+	/**
+	 * Retourne la couleur sous forme de String
 	 */
-	public void draw(Graphics g, int posX, int posY) {
-		// TODO - implement Couleur.draw
-		throw new UnsupportedOperationException();
+	public String toString() {
+		return nom;
 	}
 
 }

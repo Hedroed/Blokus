@@ -1,16 +1,23 @@
 package IA;
 
+/**
+  * Génére un objet Difficulte a partir d'une chaine de charactere
+  */
 public class DifficulteFactory {
 
 	/**
-	 * 
-	 * @param niveau
+	 * Créé un objet Difficulte
+	 * @param niveau le niveau
+	 * @return un oject Difficulte correspondant au niveau 
 	 */
-	public void getDifficulte(String niveau) {
-		// TODO - implement DifficulteFactory.getDifficulte
-		throw new UnsupportedOperationException();
+	public Difficulte getDifficulte(String niveau) {
+		
+		return null;
 	}
-
+	
+	/**
+	  * Constructeur
+	  */
 	public DifficulteFactory() {
 		// TODO - implement DifficulteFactory.DifficulteFactory
 		throw new UnsupportedOperationException();

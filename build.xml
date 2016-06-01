@@ -12,13 +12,22 @@
     </target>
 	
 	<target name="compile">
-		<javac includeantruntime="false" srcdir="${src}" destdir="${class}"/>
+		<javac includeantruntime="false" srcdir="${src}" destdir="${class}">
+			<classpath>
+				<path location="dist/junit-4.12.jar"/>
+			</classpath>
+		</javac>
 		
 		<copydir src="${resources}" dest="${class}"/>
 	</target>
 	
 	<target name="run" depends="compile">
-		<java classPath="${class}" className="ihm.Fenetre" fork="true"/>
+		<java className="ihm.Fenetre" fork="true">
+			<classpath>
+				<path path="${class}"/>
+				<path location="dist/junit-4.12.jar"/>
+			</classpath>
+		</java>
 	</target>
 	
 	<target name="javadoc" >

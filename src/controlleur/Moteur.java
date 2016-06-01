@@ -4,6 +4,11 @@ import ihm.*;
 import joueur.*;
 import blokus.*;
 
+/**
+  * Controlleur
+  * Reçoit tout les events generer par l'IHM
+  * Permet de lancer une partie
+  */
 public class Moteur {
 
 	private Fenetre fenetre;
@@ -11,8 +16,8 @@ public class Moteur {
 	public static int volume;
 
 	/**
-	 * 
-	 * @param j
+	 * Initalise la partie avec l'objet Jeu
+	 * @param j le jeu a lancer
 	 */
 	public void lancerPartie(Jeu j) {
 		// TODO - implement Moteur.lancerPartie
@@ -20,8 +25,8 @@ public class Moteur {
 	}
 
 	/**
-	 * 
-	 * @param piece
+	 * Selectionne une piece
+	 * @param piece la piece
 	 */
 	public void selectionnePiece(Piece piece) {
 		// TODO - implement Moteur.selectionnePiece
@@ -29,9 +34,10 @@ public class Moteur {
 	}
 
 	/**
-	 * 
-	 * @param joueurs
-	 * @param taille
+	 * Créer une nouvelle partie en creant un nouvel objet Jeu
+	 * @param joueurs le tableau de tout les joueurs (doit etre de 4 joueurs)
+	 * @param taille la taille du plateau (max 23)
+	 * @return un nouveau Jeu vierge
 	 */
 	private Jeu creePartie(Joueur[] joueurs, int taille) {
 		// TODO - implement Moteur.creePartie
