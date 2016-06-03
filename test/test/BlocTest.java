@@ -10,10 +10,10 @@ public class BlocTest {
 	@Test
 	public void testGetter() {
 	
-		Bloc b = new Bloc(Couleur.ROUGE,1,5);
+		Bloc b = new Bloc(Bloc.ROUGE,1,5);
 		
 		assertNotNull(b);
-		assertEquals(b.getCouleur(),Couleur.ROUGE);
+		assertEquals(b.getCouleur(),Bloc.ROUGE);
 		assertEquals(b.getPosX(),1);
 		assertEquals(b.getPosY(),5);
 	}
@@ -21,14 +21,14 @@ public class BlocTest {
 	@Test
 	public void testSetter() {
 	
-		Bloc b = new Bloc(Couleur.ROUGE,0,0);
+		Bloc b = new Bloc(Bloc.ROUGE,0,0);
 		
 		b.setPosX(5);
 		b.setPosY(42);
 		
-		b.setCouleur(Couleur.VERT);
+		b.setCouleur(Bloc.VERT);
 		
-		assertEquals(b.getCouleur(),Couleur.VERT);
+		assertEquals(b.getCouleur(),Bloc.VERT);
 		assertEquals(b.getPosX(),5);
 		assertEquals(b.getPosY(),42);
 	}

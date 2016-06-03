@@ -10,7 +10,7 @@ import java.util.*;
   */
 public class Piece {
 
-	private Bloc blocType;
+	private int couleur;
 	private boolean[][] position;
 	private boolean[][] posDefaut;
 	
@@ -18,9 +18,9 @@ public class Piece {
 	public static final int LARGEUR_DEFAUT = 3;
 	public static final int LONGUEUR_DEFAUT = 5;
 	
-	public Piece(Bloc type) {
-		if(type == null) {throw new IllegalArgumentException("Parametre null");}
-		blocType = type;
+	public Piece(int couleur) {
+		if(!Bloc.estCouleur(couleur)) {throw new IllegalArgumentException("Couleur incorrect");}
+		this.couleur = couleur;
 		
 		position = new boolean[TAILLE_TABLEAU][TAILLE_TABLEAU];
 		
@@ -28,8 +28,8 @@ public class Piece {
 		
 	}
 	
-	public Piece(Bloc type, boolean[][] pos) {
-		this(type);
+	public Piece(int couleur, boolean[][] pos) {
+		this(couleur);
 		
 		if(pos == null || pos.length != LARGEUR_DEFAUT || pos[0].length != LONGUEUR_DEFAUT) {throw new IllegalArgumentException("Parametre pos incorrect");}
 		
@@ -48,7 +48,7 @@ public class Piece {
 	public boolean equals(Piece autre) {
 		boolean ret = false;
 		
-		ret = this.blocType.equals(autre.blocType) && tabEquals(this.posDefaut,autre.posDefaut);
+		ret = this.couleur == autre.couleur && tabEquals(this.posDefaut,autre.posDefaut);
 		
 		return ret;
 	}
@@ -137,6 +137,23 @@ public class Piece {
 		return position;
 	}
 	
+	public int[][] getBlocPosition() {
+		int[][] ret = new int[TAILLE_TABLEAU][TAILLE_TABLEAU];
+		
+		for(int i = 0; i<TAILLE_TABLEAU; i++) {
+			for(int j=0; j<TAILLE_TABLEAU; j++) {
+				if(position[i][j]) {
+					ret[i][j] = couleur;
+				}
+				else {
+					ret[i][j] = Bloc.NONE;
+				}
+			}
+		}
+		
+		return ret;
+	}
+	
 	public boolean[][] getPosDefaut() {
 		return posDefaut;
 	}
@@ -148,7 +165,7 @@ public class Piece {
 			for(int j=0; j<TAILLE_TABLEAU; j++) {
 				
 				if(position[i][j]) {
-					ret = ret + " 0 ";
+					ret = ret +" "+couleur+" ";
 				}
 				else {
 					ret = ret + " - ";
@@ -170,7 +187,7 @@ public class Piece {
 		tab[1][2] = true;
 		tab[1][3] = true;
 		tab[2][2] = true;
-		Piece p3 = new Piece(new Bloc(Couleur.ROUGE),tab);
+		Piece p3 = new Piece(Bloc.ROUGE,tab);
 		
 		System.out.println(p3);
 		

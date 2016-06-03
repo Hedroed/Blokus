@@ -5,9 +5,15 @@ package blokus;
   */
 public class Bloc {
 
-	private String couleur;
+	private int couleur;
 	private int posX;
 	private int posY;
+	
+	public static final int NONE = 0;
+	public static final int BLEU = 1;
+	public static final int ROUGE = 2;
+	public static final int VERT = 3;
+	public static final int JAUNE = 4;
 	
 	/**
 	  * Constructor
@@ -15,9 +21,9 @@ public class Bloc {
 	  * @param x ca position en x sur le plateau
 	  * @param y ca position en y sur le plateau
 	  */
-	public Bloc(String couleur, int x, int y) {
+	public Bloc(int couleur, int x, int y) {
 		
-		if(!Couleur.estCouleur(couleur)) {throw new IllegalArgumentException("Cette couleur n'existe pas");}
+		if(!estCouleur(couleur)) {throw new IllegalArgumentException("Cette couleur n'existe pas");}
 		
 		this.couleur = couleur;
 		this.posX = x;
@@ -25,7 +31,7 @@ public class Bloc {
 		
 	}
 	
-	public Bloc(String couleur) {
+	public Bloc(int couleur) {
 		
 		this(couleur,0,0);
 		
@@ -33,8 +39,13 @@ public class Bloc {
 	
 	public boolean equals(Bloc autre) {
 		
-		return this.couleur.equals(autre.couleur);
+		return this.couleur == autre.couleur;
 		
+	}
+	
+	
+	public static boolean estCouleur(int c) {
+		return c >= 0 && c <= 4;
 	}
 	
 	// accesseur / modifieur
@@ -54,11 +65,11 @@ public class Bloc {
 		this.posY = y;
 	}
 
-	public String getCouleur() {
+	public int getCouleur() {
 		return this.couleur;
 	}
 
-	public void setCouleur(String c) {
+	public void setCouleur(int c) {
 		this.couleur = c;
 	}
 
