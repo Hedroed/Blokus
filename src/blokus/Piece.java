@@ -2,6 +2,8 @@ package blokus;
 
 import java.util.*;
 
+import java.awt.Point;
+
 /**
   * Represente une piece dans la jeu.
   * Permet de connaitre la forme de la piece
@@ -13,6 +15,7 @@ public class Piece {
 	private int couleur;
 	private boolean[][] position;
 	private boolean[][] posDefaut;
+	private Piece parent;
 	
 	public static final int TAILLE_TABLEAU = 5;
 	public static final int LARGEUR_DEFAUT = 3;
@@ -132,6 +135,45 @@ public class Piece {
 		position = newPosition;
 	}
 	
+	public ArrayList<Point> getPointEntre() {
+		
+		ArrayList<Point> ret = new ArrayList<Point>();
+		
+		for(int i=0; i<TAILLE_TABLEAU; i++) {
+				
+			for(int j=0; j<TAILLE_TABLEAU; j++) {
+				
+				if(!position[i][j]) {
+					
+					boolean touche = blocAt(i-1,j);
+					touche = touche || blocAt(i+1,j);
+					touche = touche || blocAt(i,j-1);
+					touche = touche || blocAt(i,j+1);
+					boolean connection = blocAt(i-1,j-1);
+					connection = connection || blocAt(i-1,j+1);
+					connection = connection || blocAt(i+1,j-1);
+					connection = connection || blocAt(i+1,j+1);
+					
+					if(!touche && connection) {
+						ret.add(new Point(i,j));
+					}
+				}
+
+			}
+			
+		}
+		return ret;
+	}
+	
+	private boolean blocAt(int x, int y) {
+		if(x >= 0 && x < TAILLE_TABLEAU && y >= 0 && y < TAILLE_TABLEAU) {
+			return position[x][y];
+		}
+		else {
+			return false;
+		}
+	}
+	
 	//setter getter
 	public boolean[][] getPosition() {
 		return position;
@@ -156,6 +198,10 @@ public class Piece {
 	
 	public boolean[][] getPosDefaut() {
 		return posDefaut;
+	}
+	
+	public int getCouleur() {
+		return this.couleur;
 	}
 	
 	public String toString() {
@@ -207,6 +253,20 @@ public class Piece {
 		
 		System.out.println(p3);
 		
+		tab = new boolean[3][5];
+		tab[0][2] = true;
+		tab[1][2] = true;
+		tab[2][2] = true;
+		tab[1][1] = true;
+		tab[1][3] = true;
+		Piece p4 = new Piece(Bloc.VERT,tab);
 		
+		System.out.println(p4);
+		
+		ArrayList<Point> ps = p4.getPointEntre();
+		
+		for(Point p : ps) {
+			System.out.println(p);
+		}
 	}
 }

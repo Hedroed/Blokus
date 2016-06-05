@@ -33,28 +33,22 @@ public class Plateau {
 		
 		if(Bloc.estCouleur(c)) {
 			
-			for(int i=0; i<TAILLE_PLATEAU; i++) {//fait nimorte qui fkjsnjkfszjhfbshj
+			for(int i=0; i<TAILLE_PLATEAU; i++) {
 				
 				for(int j=0; j<TAILLE_PLATEAU; j++) {
 					
 					if(plateau[i][j] == Bloc.NONE) {
 						
-						if(blocEgale(i-1,j-1,c)) {
-							
-							entres.add(new Point(i,j));
-							
-						} 
-						else if(blocEgale(i+1,j-1,c)) {
-							
-							entres.add(new Point(i,j));
-							
-						}
-						else if(blocEgale(i-1,j+1,c)) {
+						boolean touche = blocEgale(i-1,j,c);
+						touche = touche || blocEgale(i+1,j,c);
+						touche = touche || blocEgale(i,j-1,c);
+						touche = touche || blocEgale(i,j+1,c);
+						boolean connection = blocEgale(i-1,j-1,c);
+						connection = connection || blocEgale(i-1,j+1,c);
+						connection = connection || blocEgale(i+1,j-1,c);
+						connection = connection || blocEgale(i+1,j+1,c);
 						
-							entres.add(new Point(i,j));
-						
-						}
-						else if(blocEgale(i+1,j+1,c)) {
+						if(!touche && connection) {
 							entres.add(new Point(i,j));
 						}
 					}
@@ -64,8 +58,6 @@ public class Plateau {
 			}
 			
 		}
-		
-		System.out.println("taille entres "+entres.size());
 	}
 
 	/**
@@ -102,6 +94,7 @@ public class Plateau {
 		boolean connection = false;
 		
 		int[][] pPosition = p.getBlocPosition();
+		int pieceCouleur = p.getCouleur();
 		
 		int i = 0;
 		while(!touche && i < Piece.TAILLE_TABLEAU) {
@@ -112,14 +105,14 @@ public class Plateau {
 					if(x+i >=0 && x+i < TAILLE_PLATEAU && y+j >=0 && y+j <TAILLE_PLATEAU) {
 						
 						touche = touche || plateau[x+i][y+j] != Bloc.NONE;
-						touche = touche || blocEgale(i,j,x+i-1,y+j,pPosition);
-						touche = touche || blocEgale(i,j,x+i+1,y+j,pPosition);
-						touche = touche || blocEgale(i,j,x+i,y+j-1,pPosition);
-						touche = touche || blocEgale(i,j,x+i,y+j+1,pPosition);
-						connection = connection || blocEgale(i,j,x+i-1,y+j-1,pPosition);
-						connection = connection || blocEgale(i,j,x+i-1,y+j+1,pPosition);
-						connection = connection || blocEgale(i,j,x+i+1,y+j-1,pPosition);
-						connection = connection || blocEgale(i,j,x+i+1,y+j+1,pPosition);
+						touche = touche || blocEgale(x+i-1,y+j,pieceCouleur);
+						touche = touche || blocEgale(x+i+1,y+j,pieceCouleur);
+						touche = touche || blocEgale(x+i,y+j-1,pieceCouleur);
+						touche = touche || blocEgale(x+i,y+j+1,pieceCouleur);
+						connection = connection || blocEgale(x+i-1,y+j-1,pieceCouleur);
+						connection = connection || blocEgale(x+i-1,y+j+1,pieceCouleur);
+						connection = connection || blocEgale(x+i+1,y+j-1,pieceCouleur);
+						connection = connection || blocEgale(x+i+1,y+j+1,pieceCouleur);
 						
 					}
 				}
@@ -130,7 +123,7 @@ public class Plateau {
 		
 		return !touche && connection;
 	}
-
+	
 	private boolean blocEgale(int x1, int y1, int x2, int y2,int[][] tab2) {
 		boolean ret = false;
 		
@@ -171,10 +164,11 @@ public class Plateau {
 		
 		if(x >=0 && x < TAILLE_PLATEAU && y >=0 && y <TAILLE_PLATEAU) {
 			
-			ret =  plateau[x][y] == val;
+			ret = plateau[x][y] == val;
 			
 		}
-		if((x == -1 && y == -1) || (x == -1 && y == TAILLE_PLATEAU) || (x == TAILLE_PLATEAU && y == -1) || (x == TAILLE_PLATEAU && y == TAILLE_PLATEAU)) {
+		if((x == -1 && y == -1 && val == Bloc.JAUNE) || (x == -1 && y == TAILLE_PLATEAU && val == Bloc.ROUGE) 
+			|| (x == TAILLE_PLATEAU && y == -1 && val == Bloc.BLEU) || (x == TAILLE_PLATEAU && y == TAILLE_PLATEAU && val == Bloc.VERT)) {
 			ret=true;
 		}
 		
@@ -198,25 +192,33 @@ public class Plateau {
 		
 		int indiceEntre = 0;
 		
-		if(!entres.isEmpty())
-		System.out.println("next point "+entres.get(indiceEntre));
-		
 		for(int i=0; i<TAILLE_PLATEAU; i++) {
 			for(int j=0; j<TAILLE_PLATEAU; j++) {
 				
 				if(!entres.isEmpty()) {
 					
-					if(i < entres.size() && i == entres.get(indiceEntre).getX() && j == entres.get(indiceEntre).getY()) {
-						ret = ret+" O";
+					if(indiceEntre < entres.size() && i == entres.get(indiceEntre).getX() && j == entres.get(indiceEntre).getY()) {
+						ret = ret+" +";
 						indiceEntre++;
 					}
 					else {
-						ret = ret+" "+plateau[i][j];
+						if(plateau[i][j] == 0) {
+							ret = ret+" -";
+						}
+						else {
+							ret = ret+" "+plateau[i][j];
+						}
+						
 					}
 					
 				}
 				else {
-					ret = ret+" "+plateau[i][j];
+					if(plateau[i][j] == 0) {
+						ret = ret+" -";
+					}
+					else {
+						ret = ret+" "+plateau[i][j];
+					}
 				}
 
 			}
@@ -241,7 +243,7 @@ public class Plateau {
 		System.out.println(momPlat);
 		System.out.println(p3);
 		
-		System.out.println(momPlat.peutPlacerPiece(p3,-1,0));
+		System.out.println(momPlat.peutPlacerPiece(p3,-1,15));
 		
 		momPlat.placePiece(p3,-1,0);
 		
@@ -265,8 +267,9 @@ public class Plateau {
 		
 		System.out.println(momPlat);
 		
-		System.out.println(momPlat.peutPlacerPiece(p4,3,2));
-		momPlat.placePiece(p4,3,2);
+		p4.pivoterGauche();
+		System.out.println(momPlat.peutPlacerPiece(p4,2,1));
+		momPlat.placePiece(p4,2,1);
 		
 		System.out.println(momPlat);
 		
