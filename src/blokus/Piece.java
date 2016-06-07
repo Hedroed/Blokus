@@ -16,37 +16,51 @@ public class Piece {
 	private boolean[][] position;
 	private boolean[][] posDefaut;
 	private Piece parent;
+	private Piece parent2;
+	private int longueur;
 	
 	public static final int TAILLE_TABLEAU = 5;
 	public static final int LARGEUR_DEFAUT = 3;
 	public static final int LONGUEUR_DEFAUT = 5;
 	
 	public Piece(int couleur) {
-		if(!Bloc.estCouleur(couleur)) {throw new IllegalArgumentException("Couleur incorrect");}
-		this.couleur = couleur;
-		
-		position = new boolean[TAILLE_TABLEAU][TAILLE_TABLEAU];
-		
-		posDefaut = new boolean[LARGEUR_DEFAUT][LONGUEUR_DEFAUT];
-		
+		this(couleur,null);
 	}
 	
-	public Piece(int couleur, boolean[][] pos) {
-		this(couleur);
+	public Piece(int couleur, Piece p) {
+		this(couleur,new boolean[LARGEUR_DEFAUT][LONGUEUR_DEFAUT],p);
+	}
+	
+	public Piece(int couleur, boolean[][] pos, Piece p) {
+		
+		// System.out.println("creation piece "+couleur+" pos : "+pos+" parent :"+p);
+		
+		if(!Bloc.estCouleur(couleur)) {throw new IllegalArgumentException("Couleur incorrecte");}
+		this.couleur = couleur;
 		
 		if(pos == null || pos.length != LARGEUR_DEFAUT || pos[0].length != LONGUEUR_DEFAUT) {throw new IllegalArgumentException("Parametre pos incorrect");}
 		
 		posDefaut = pos.clone();
 		
+		parent = p;
+		
+		position = new boolean[TAILLE_TABLEAU][TAILLE_TABLEAU];
+		
+		longueur = 0;
 		//copie le tableau de 5x3 dans le 5x5
 		for(int i=0; i<LARGEUR_DEFAUT; i++) {
 			for(int j=0; j<LONGUEUR_DEFAUT; j++) {
+				
+				if(pos[i][j]) {
+					longueur++;
+				}
 				
 				position[i+1][j] = pos[i][j];
 				
 			}
 		}
 	}
+	
 	
 	public boolean equals(Piece autre) {
 		boolean ret = false;
@@ -56,6 +70,15 @@ public class Piece {
 		return ret;
 	}
 	
+	public boolean deepEquals(Piece autre) {
+		return false;
+	}
+	
+	/**
+	*Comare deux tableaux de booleens
+	*@param t1 le premier tableau
+	*@param t2 le second tableau
+	*/
 	private boolean tabEquals(boolean[][] t1, boolean[][] t2) {
 		boolean ret = false;
 		
@@ -82,6 +105,9 @@ public class Piece {
 		return ret;
 	}
 	
+	/**
+	*Tourne la piece vers la Gauche
+	*/
 	public void pivoterGauche() {
 		
 		boolean[][] newPosition = new boolean[TAILLE_TABLEAU][TAILLE_TABLEAU];
@@ -97,6 +123,9 @@ public class Piece {
 		position = newPosition;
 	}
 	
+	/**
+	*Tourne la piece vers la droite
+	*/
 	public void pivoterDroite() {
 		boolean[][] newPosition = new boolean[TAILLE_TABLEAU][TAILLE_TABLEAU];
 		
@@ -111,6 +140,9 @@ public class Piece {
 		position = newPosition;
 	}
 	
+	/**
+	*Inverse le tableau vers le bas
+	*/
 	public void miroirVerticale() {
 		boolean[][] newPosition = new boolean[TAILLE_TABLEAU][TAILLE_TABLEAU];
 		for(int i=0; i<TAILLE_TABLEAU; i++) {
@@ -123,6 +155,9 @@ public class Piece {
 		position = newPosition;
 	}
 	
+	/**
+	*Inverse le tableau lateralement
+	*/
 	public void miroirHorizontale() {
 		boolean[][] newPosition = new boolean[TAILLE_TABLEAU][TAILLE_TABLEAU];
 		for(int i=0; i<TAILLE_TABLEAU; i++) {
@@ -165,6 +200,29 @@ public class Piece {
 		return ret;
 	}
 	
+	public ArrayList<Point> getPointEntre2() {
+		
+		ArrayList<Point> ret = new ArrayList<Point>();
+		
+		for(int i=0; i<TAILLE_TABLEAU; i++) {
+				
+			for(int j=0; j<TAILLE_TABLEAU; j++) {
+				
+				if(position[i][j]) {
+					ret.add(new Point(i,j));
+				}
+
+			}
+			
+		}
+		return ret;
+	}
+	
+	/**
+	*Retourne le bloc au coordonnees donnees
+	*@param x la coordonnee x
+	*@param y la coordonnee y
+	*/
 	private boolean blocAt(int x, int y) {
 		if(x >= 0 && x < TAILLE_TABLEAU && y >= 0 && y < TAILLE_TABLEAU) {
 			return position[x][y];
@@ -204,6 +262,26 @@ public class Piece {
 		return this.couleur;
 	}
 	
+	public Piece getParent() {
+		return parent;
+	}
+	
+	public void setParent(Piece p) {
+		this.parent = p;
+	}
+	
+	public Piece getParent2() {
+		return parent2;
+	}
+	
+	public void setParent2(Piece p) {
+		this.parent2 = p;
+	}
+	
+	public int getLongueur() {
+		return longueur;
+	}
+	
 	public String toString() {
 		String ret = "";
 		
@@ -216,7 +294,6 @@ public class Piece {
 				else {
 					ret = ret + " - ";
 				}
-				
 				
 			}
 			ret = ret + "\n";
@@ -233,7 +310,7 @@ public class Piece {
 		tab[1][2] = true;
 		tab[1][3] = true;
 		tab[2][2] = true;
-		Piece p3 = new Piece(Bloc.ROUGE,tab);
+		Piece p3 = new Piece(Bloc.ROUGE,tab,null);
 		
 		System.out.println(p3);
 		
@@ -259,7 +336,7 @@ public class Piece {
 		tab[2][2] = true;
 		tab[1][1] = true;
 		tab[1][3] = true;
-		Piece p4 = new Piece(Bloc.VERT,tab);
+		Piece p4 = new Piece(Bloc.VERT,tab,null);
 		
 		System.out.println(p4);
 		

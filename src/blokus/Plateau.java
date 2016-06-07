@@ -16,9 +16,21 @@ public class Plateau {
 	private int[][] plateau;
 	private ArrayList<Point> entres;
 	
+	/**
+	  * Constructeur, initialise les attributs
+	  */
 	public Plateau() {
 		
 		plateau = new int[TAILLE_PLATEAU][TAILLE_PLATEAU];
+		entres = new ArrayList<Point>();
+	}
+	
+	/**
+	  * Constructeur, initialise les attributs
+	  *@param plat le plateau
+	  */
+	public Plateau(int[][] plat) {
+		plateau = plat;
 		entres = new ArrayList<Point>();
 	}
 	
@@ -121,6 +133,8 @@ public class Plateau {
 			i++;
 		}
 		
+		System.out.println("touche :"+touche+" connection :"+connection);
+		
 		return !touche && connection;
 	}
 	
@@ -187,6 +201,11 @@ public class Plateau {
 		throw new UnsupportedOperationException();
 	}
 	
+	//setter getter
+	public ArrayList<Point> getEntres() {
+		return entres;
+	}
+	
 	public String toString() {
 		String ret = "";
 		
@@ -238,7 +257,7 @@ public class Plateau {
 		tab[0][3] = true;
 		tab[0][4] = true;
 		tab[0][0] = true;
-		Piece p3 = new Piece(Bloc.ROUGE,tab);
+		Piece p3 = new Piece(Bloc.ROUGE,tab,null);
 		
 		System.out.println(momPlat);
 		System.out.println(p3);
@@ -255,7 +274,7 @@ public class Plateau {
 		tab[1][2] = true;
 		tab[1][3] = true;
 		tab[0][3] = true;
-		Piece p4 = new Piece(Bloc.ROUGE,tab);
+		Piece p4 = new Piece(Bloc.ROUGE,tab,null);
 		p4.pivoterGauche();
 		System.out.println(p4);
 		
@@ -273,8 +292,19 @@ public class Plateau {
 		
 		System.out.println(momPlat);
 		
-		momPlat.trouveEnterPossible(Bloc.ROUGE);
+		momPlat.trouveEnterPossible(Bloc.VERT);
 		System.out.println(momPlat);
+		
+		tab = new boolean[3][5];
+		tab[0][1] = true;
+		tab[1][1] = true;
+		tab[2][1] = true;
+		tab[2][2] = true;
+		tab[2][3] = true;
+		Piece p5 = new Piece(Bloc.VERT,tab,null);
+		System.out.println(p5);
+		System.out.println("verte : "+momPlat.peutPlacerPiece(p5,16,16));
+		
 	}
 	
 }
