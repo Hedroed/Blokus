@@ -1,12 +1,13 @@
 package ihm;
 
 import java.awt.Graphics;
+import java.awt.event.*;
 
 /**
 *Classe representant le Menu-in-game du jeu et qui presente des sauvegardes
 *
 */
-public class MenuPartie {
+public class MenuPartie{
 
 	private Sauvegarde sauvegarde;
 
@@ -18,5 +19,5 @@ public class MenuPartie {
 		// TODO - implement MenuPartie.draw
 		throw new UnsupportedOperationException();
 	}
-
+	
 }

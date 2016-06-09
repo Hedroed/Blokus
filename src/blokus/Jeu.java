@@ -19,14 +19,10 @@ public class Jeu {
 	private int tour;
 	private int indiceJoueurActif;
 	
-	private int joueurEnMatch;
-	
 	public Jeu(Joueur[] js) {
 		if(js == null) {throw new IllegalArgumentException("joueurs null");}
 		joueurs = js;
 		plateau = new Plateau();
-		
-		joueurEnMatch = 4; 
 		
 		tour = 0;
 		indiceJoueurActif = 0;
@@ -40,13 +36,6 @@ public class Jeu {
 		if(plat == null) {throw new IllegalArgumentException("plateau null");}
 		plateau = new Plateau(plat);
 		
-		joueurEnMatch = 0;
-		for(int i=0; i<joueurs.length; i++) {
-			if(joueurs[i].peutJouer()) {
-				joueurEnMatch++;
-			}
-		}
-		
 		tour = 0;
 		indiceJoueurActif = 0;
 		this.temps = temps;
@@ -55,38 +44,42 @@ public class Jeu {
 	/**
 	  * Passe au tour suivant, increment l'attribut tour et passe au joueur suivant
 	  */
-	public void nouveauTour() {
+	public boolean nouveauTour() {
 		//check si le joueur peut continuer a joueur, sinon le retire de la partie
 		
+		int nbJoueur = 0;
 		for(int i=0; i<joueurs.length; i++) {
 			
-			if(joueurs[i].peutJouer() && !peutContinuerAJouer(joueurs[i])) {
-				if(joueurEnMatch == 1) {
-					System.out.println("Fin de partie !!! "+joueurs[i]+" gagne avec une score de "+joueurs[i].getScore());
+			if(joueurs[i].peutJouer()) {
+				if(!peutContinuerAJouer(joueurs[i])) {
+					joueurs[i].setPeutJouer(false);
+					System.out.println("Joueur "+joueurs[i]+" ne peut plus jouer");
 				}
 				else {
-					joueurs[i].setPeutJouer(false);
-					System.out.println("Joueur "+joueurs[i]+" a perdu avec une score de "+joueurs[i].getScore());
-					joueurEnMatch--;
+					nbJoueur++;
 				}
 			}
 			
 		}
-		
 		//passe au joueur suivant qui peut jouer
-		indiceJoueurActif++;
-		if(indiceJoueurActif >= 4) {
-			indiceJoueurActif = 0;
-			tour++;
-		}
-		while(!getJoueurActif().peutJouer()) {
+		if(nbJoueur > 0) {
 			indiceJoueurActif++;
-			if(indiceJoueurActif >= 4) {
+			if(indiceJoueurActif >= joueurs.length) {
 				indiceJoueurActif = 0;
 				tour++;
 			}
+			while(!getJoueurActif().peutJouer()) {
+				indiceJoueurActif++;
+				if(indiceJoueurActif >= joueurs.length) {
+					indiceJoueurActif = 0;
+					tour++;
+				}
+			}
 		}
 		
+		System.out.println("Nouveau tour "+tour+" nb joueur "+nbJoueur);
+		
+		return nbJoueur <= 0;
 	}
 
 	/**
@@ -113,42 +106,69 @@ public class Jeu {
 		
 		if(jPiece.isEmpty()) {throw new BlokusException("Le joueur n'a plus de piece");}
 		
-		ArrayList<Piece> parents = new ArrayList<Piece>();
+		// ArrayList<Piece> parents = new ArrayList<Piece>();
 		
-		for(Piece p : jPiece) {
-			parentPieceRect(p,parents,jPiece);
-		}
+		// for(Piece p : jPiece) {
+			// parentPieceRect(p,parents,jPiece);
+		// }
+		
+		// for(Piece p : parents) {
+			// System.out.println("parent id:"+p.getId());
+		// }
+		// System.out.println();
 		
 		//check les pieces parents
 		plateau.trouveEnterPossible(j.getCouleur());
 		ArrayList<Point> entres = plateau.getEntres();
 		
-		boolean ret = true;
-		
 		for(Point uneEntree : entres) {
 			
-			for(Piece unePiece : parents) {
-				
-				ArrayList<Point> points = unePiece.getPointEntre2();
+			for(Piece unePiece : jPiece) {
 				boolean peutPlacer = false;
 				
-				for(Point pieceEntre : points) {
-					
-					if(plateau.peutPlacerPiece(unePiece,(int)(uneEntree.getX()-pieceEntre.getX()),(int)(uneEntree.getY()-pieceEntre.getY()))) {
-						peutPlacer = true;
+				int max = 8;
+				if(unePiece.getMiroirInutile()) {
+					max = 4;
+					if(unePiece.getRotationInutile()) {
+						max = 1;
 					}
-					
 				}
 				
-				if(!peutPlacer) {
-					ret = false;
+				// System.out.println("Piece "+unePiece+" max = "+max);
+				
+				for(int i=0; i<max; i++) {
+					ArrayList<Point> points = unePiece.getPointEntre2();
+					
+					for(Point pieceEntre : points) {
+						
+						if(plateau.peutPlacerPiece(unePiece,(int)(uneEntree.getX()-pieceEntre.getX()),(int)(uneEntree.getY()-pieceEntre.getY()))) {
+							peutPlacer = true;
+						}
+						
+					}
+					
+					unePiece.pivoterGauche();
+					if(i == 4) {
+						unePiece.miroirHorizontale();
+					}
+				}
+				
+				// System.out.println("test de piece "+unePiece.getId()+" placable "+peutPlacer);
+				
+				unePiece.positionDefaut();
+				
+				if(peutPlacer) {
+					return true;
 				}
 			}
 		}
 
-		return ret;
+		return false;
 	}
 	
+	/**
+	  * Not use
+	  */
 	private void parentPieceRect(Piece p, ArrayList<Piece> parents, ArrayList<Piece> pieces) {
 		
 		Piece pa1 = p.getParent();

@@ -11,10 +11,10 @@ import java.io.*;
   */
 public class Joueur {
 
-	private ArrayList<Piece> pieces;
-	private int couleur;
-	private String nom;
-	private boolean peutJouer;
+	protected ArrayList<Piece> pieces;
+	protected int couleur;
+	protected String nom;
+	protected boolean peutJouer;
 	
 	private int score;
 	
@@ -69,14 +69,23 @@ public class Joueur {
 		while(j<nbPieces){
 			boolean[][] coordonnees = new boolean[Piece.LARGEUR_DEFAUT][Piece.LONGUEUR_DEFAUT];
 			try{
-			ligne=in.readLine();
+				ligne=in.readLine();//ligne des parents
 			}
 			catch(IOException e){
 				e.printStackTrace();
 			}
 			parent1=parent2=-1;
 			String[] parents= ligne.split(",");
-			// System.out.println(ligne);
+			
+			try{
+				ligne=in.readLine();//ligne des rotations inutiles
+			}
+			catch(IOException e){
+				e.printStackTrace();
+			}
+			String[] optionRotation= ligne.split(",");
+			boolean miroirI = optionRotation[0].equals("1");
+			boolean rotationI = optionRotation[1].equals("1");
 			
 			i=0;
 			while(i<Piece.LARGEUR_DEFAUT){
@@ -103,21 +112,22 @@ public class Joueur {
 				i++;
 			}
 			Piece p=null;
-			parent1=Integer.parseInt(parents[0]);
+
+			p=new Piece(couleur,coordonnees);
 			
-			if((parent1-1)<0){
-				p=new Piece(couleur,coordonnees,null);
-			}
-			else{
-				p=new Piece(couleur,coordonnees,pieces.get(parent1-1));
+			if((parent1-1) >= 0){
+				parent1=Integer.parseInt(parents[0]);
+				p.setParent(pieces.get(parent1-1));
 			}
 			
 			if(parents.length==2){
 				
 				parent2=Integer.parseInt(parents[1]);
-				
 				p.setParent2(pieces.get(parent2-1));
 			}
+			
+			p.setMiroirInutile(miroirI);
+			p.setRotationInutile(rotationI);
 			
 			pieces.add(p);
 			j++;
@@ -199,6 +209,10 @@ public class Joueur {
 	
 	public int getScore() {
 		return score;
+	}
+	
+	public String getNom() {
+		return nom;
 	}
 	
 	public static void main(String[] args) {

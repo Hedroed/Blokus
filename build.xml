@@ -37,6 +37,15 @@
 		</java>
 	</target>
 	
+	<target name="run-ligne" depends="compile">
+		<java className="BlokusEnLigne" fork="true">
+			<classpath>
+				<path path="${class.dir}"/>
+				<path location="dist/junit-4.12.jar"/>
+			</classpath>
+		</java>
+	</target>
+	
 	<target name="javadoc" >
 		<mkdir dir="javadoc"/>
 		<javadoc sourcepath="src" destdir="javadoc" author="true" version="true" use="true"/>
@@ -53,7 +62,7 @@
 		
 		<jar destfile="jar/project-${build.name}.jar" basedir="${class.dir}">
             <manifest>
-                <attribute name="Main-Class" value="main.Fenetre"/>
+                <attribute name="Main-Class" value="ihm.Fenetre"/>
 				<attribute name="Built-By" value="${user.name}"/>
 				<attribute name="Implementation-Version" value="${project.version}- a ${build.time} le ${build.date}"/>
             </manifest>
@@ -92,7 +101,7 @@
 			<report format="frames" todir="${test.html.dir}" />
 		</junitreport>
 		
-		<!--fail if="test.failures" message="Problemes lors des tests." /-->
+		<fail if="test.failures" message="Erreur lors des tests" />
 	</target>
 	
 </project>

@@ -12,10 +12,10 @@ public interface Difficulte {
 
 	/**
 	 * Place une piece du joueur associé dans le plateau de jeu
-	 * @param j le plateau de jeu 
-	 * @param p la liste des pieces du joueur
+	 * @param plateau le plateau de jeu 
+	 * @param pieces la liste des pieces du joueur
 	 * @param c la couleur du joueur
 	 */
-	public void placePiece(Jeu j, ArrayList<Piece> p, Couleur c);
+	public IAAction placePiece(Plateau plateau, ArrayList<Piece> pieces, int c);
 
 }

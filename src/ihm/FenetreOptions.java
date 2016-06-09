@@ -8,7 +8,7 @@ import java.awt.event.*;
 /**
 *JPanel contenant toutes les options et reglages.
 */
-public class FenetreOptions extends AbstractFenetre {
+public class FenetreOptions extends AbstractPanneau{
 	
 	
 	/**

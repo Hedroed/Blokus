@@ -38,7 +38,7 @@ public class Plateau {
 	 * Determine pour un joueur tout les coordonée ou il peut placer un block pour ensuite l'affiché 
 	 * et ainsi permettre au joueur de trouver plus facilement ou placer ces pieces
 	 * crée un tableau de Point dans l'attribut entre
-	 * @param j le joueur
+	 * @param c la couleur du joueur
 	 */
 	public void trouveEnterPossible(int c) {
 		entres.clear();
@@ -68,8 +68,9 @@ public class Plateau {
 				}
 
 			}
-			
+			// return entres;
 		}
+		// return null;
 	}
 
 	/**
@@ -127,13 +128,16 @@ public class Plateau {
 						connection = connection || blocEgale(x+i+1,y+j+1,pieceCouleur);
 						
 					}
+					else {
+						touche = true;
+					}
 				}
 				j++;
 			}
 			i++;
 		}
 		
-		System.out.println("touche :"+touche+" connection :"+connection);
+		// System.out.println("touche :"+touche+" connection :"+connection);
 		
 		return !touche && connection;
 	}
@@ -172,7 +176,13 @@ public class Plateau {
 		
 		return ret;
 	}
-	
+	/**
+	*Retourne Vrai ou faux selon le contenu de la case saisie en parametre
+	*@param x la coordonnee x du bloc cherche
+	*@param y la coordonnee y du bloc cherche
+	*@param val le symbole du joueur, la couleur, 1-4
+	*@return un booleen vrai si la case saisie contient un bloc de couleur saisie, sinon faux
+	*/
 	private boolean blocEgale(int x, int y, int val) {
 		boolean ret = false;
 		
@@ -247,6 +257,10 @@ public class Plateau {
 		return ret;
 	}
 	
+	public int[][] getPlateau() {
+		return plateau.clone();
+	}
+	
 	public static void main(String[] args) {
 		
 		Plateau momPlat = new Plateau();
@@ -257,7 +271,7 @@ public class Plateau {
 		tab[0][3] = true;
 		tab[0][4] = true;
 		tab[0][0] = true;
-		Piece p3 = new Piece(Bloc.ROUGE,tab,null);
+		Piece p3 = new Piece(Bloc.ROUGE,tab);
 		
 		System.out.println(momPlat);
 		System.out.println(p3);
@@ -274,7 +288,7 @@ public class Plateau {
 		tab[1][2] = true;
 		tab[1][3] = true;
 		tab[0][3] = true;
-		Piece p4 = new Piece(Bloc.ROUGE,tab,null);
+		Piece p4 = new Piece(Bloc.ROUGE,tab);
 		p4.pivoterGauche();
 		System.out.println(p4);
 		
@@ -301,7 +315,7 @@ public class Plateau {
 		tab[2][1] = true;
 		tab[2][2] = true;
 		tab[2][3] = true;
-		Piece p5 = new Piece(Bloc.VERT,tab,null);
+		Piece p5 = new Piece(Bloc.VERT,tab);
 		System.out.println(p5);
 		System.out.println("verte : "+momPlat.peutPlacerPiece(p5,16,16));
 		

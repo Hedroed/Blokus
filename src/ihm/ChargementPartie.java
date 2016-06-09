@@ -8,7 +8,7 @@ import java.awt.event.*;
   * Fenetre de chargement de partie sauvegardée
   * Elle utilise une classe Chargement pour cela
   */
-public class ChargementPartie extends AbstractFenetre {
+public class ChargementPartie extends AbstractPanneau {
 
 	private Chargement chargeur;
 	

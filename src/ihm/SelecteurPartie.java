@@ -4,7 +4,7 @@ import controlleur.*;
 
 import java.awt.event.*;
 
-public class SelecteurPartie extends AbstractFenetre {
+public class SelecteurPartie extends AbstractPanneau {
 	
 	public SelecteurPartie(Moteur m) {
 		super(m);

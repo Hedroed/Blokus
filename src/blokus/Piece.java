@@ -19,19 +19,24 @@ public class Piece {
 	private Piece parent2;
 	private int longueur;
 	
+	private int id;
+	private static int globalId = 0;
+	
+	private boolean rotationInutile;
+	private boolean miroirInutile;
+	
 	public static final int TAILLE_TABLEAU = 5;
 	public static final int LARGEUR_DEFAUT = 3;
 	public static final int LONGUEUR_DEFAUT = 5;
 	
 	public Piece(int couleur) {
-		this(couleur,null);
+		this(couleur,new boolean[LARGEUR_DEFAUT][LONGUEUR_DEFAUT]);
 	}
 	
-	public Piece(int couleur, Piece p) {
-		this(couleur,new boolean[LARGEUR_DEFAUT][LONGUEUR_DEFAUT],p);
-	}
-	
-	public Piece(int couleur, boolean[][] pos, Piece p) {
+	public Piece(int couleur, boolean[][] pos) {
+		
+		id = globalId;
+		globalId++;
 		
 		// System.out.println("creation piece "+couleur+" pos : "+pos+" parent :"+p);
 		
@@ -41,9 +46,7 @@ public class Piece {
 		if(pos == null || pos.length != LARGEUR_DEFAUT || pos[0].length != LONGUEUR_DEFAUT) {throw new IllegalArgumentException("Parametre pos incorrect");}
 		
 		posDefaut = pos.clone();
-		
-		parent = p;
-		
+				
 		position = new boolean[TAILLE_TABLEAU][TAILLE_TABLEAU];
 		
 		longueur = 0;
@@ -106,6 +109,21 @@ public class Piece {
 	}
 	
 	/**
+	  * Met la piece dans sa position de creation
+	  */
+	public void positionDefaut() {
+		position = new boolean[TAILLE_TABLEAU][TAILLE_TABLEAU];
+		
+		for(int i=0; i<LARGEUR_DEFAUT; i++) {
+			for(int j=0; j<LONGUEUR_DEFAUT; j++) {
+				
+				position[i+1][j] = posDefaut[i][j];
+				
+			}
+		}
+	}
+	
+	/**
 	*Tourne la piece vers la Gauche
 	*/
 	public void pivoterGauche() {
@@ -143,7 +161,7 @@ public class Piece {
 	/**
 	*Inverse le tableau vers le bas
 	*/
-	public void miroirVerticale() {
+	public void miroirHorizontale() {
 		boolean[][] newPosition = new boolean[TAILLE_TABLEAU][TAILLE_TABLEAU];
 		for(int i=0; i<TAILLE_TABLEAU; i++) {
 			for(int j=0; j<TAILLE_TABLEAU; j++) {
@@ -158,7 +176,7 @@ public class Piece {
 	/**
 	*Inverse le tableau lateralement
 	*/
-	public void miroirHorizontale() {
+	public void miroirVerticale() {
 		boolean[][] newPosition = new boolean[TAILLE_TABLEAU][TAILLE_TABLEAU];
 		for(int i=0; i<TAILLE_TABLEAU; i++) {
 			for(int j=0; j<TAILLE_TABLEAU; j++) {
@@ -170,6 +188,9 @@ public class Piece {
 		position = newPosition;
 	}
 	
+	/**
+	*Retourne les point d'entree dans lesquels une piece peut etre placee
+	*/
 	public ArrayList<Point> getPointEntre() {
 		
 		ArrayList<Point> ret = new ArrayList<Point>();
@@ -278,6 +299,26 @@ public class Piece {
 		this.parent2 = p;
 	}
 	
+	public boolean getMiroirInutile() {
+		return miroirInutile;
+	}
+	
+	public void setMiroirInutile(boolean b) {
+		this.miroirInutile = b;
+	}
+	
+	public boolean getRotationInutile() {
+		return rotationInutile;
+	}
+	
+	public void setRotationInutile(boolean b) {
+		this.rotationInutile = b;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	
 	public int getLongueur() {
 		return longueur;
 	}
@@ -296,10 +337,10 @@ public class Piece {
 				}
 				
 			}
-			ret = ret + "\n";
+			ret = ret+"\n";
 		}
 		
-		return ret;
+		return ret+ "  id:"+id;
 	}
 	
 	public static void main(String[] args) {
@@ -310,7 +351,7 @@ public class Piece {
 		tab[1][2] = true;
 		tab[1][3] = true;
 		tab[2][2] = true;
-		Piece p3 = new Piece(Bloc.ROUGE,tab,null);
+		Piece p3 = new Piece(Bloc.ROUGE,tab);
 		
 		System.out.println(p3);
 		
@@ -336,7 +377,7 @@ public class Piece {
 		tab[2][2] = true;
 		tab[1][1] = true;
 		tab[1][3] = true;
-		Piece p4 = new Piece(Bloc.VERT,tab,null);
+		Piece p4 = new Piece(Bloc.VERT,tab);
 		
 		System.out.println(p4);
 		

@@ -19,8 +19,10 @@ public class IA extends Joueur {
 	 * @param couleur ça couleur
 	 * @param niveau le niveau qui permettre de générer un objet Difficulte
 	 */
-	public IA(String nom, Couleur couleur, String niveau) {
+	public IA(String nom, int couleur, int niveau) {
 		super(nom, couleur);
+		
+		difficulte = DifficulteFactory.getDifficulte(niveau);
 		
 	}
 
@@ -28,9 +30,17 @@ public class IA extends Joueur {
 	 * Place une piece parmi les pieces restantes sur le plateau, l'algorithme qui placera la piece se trouve dans l'objet Difficulte
 	 * @param p le plateau
 	 */
-	public boolean placePiece(Plateau p) {
-		// TODO - implement IA.placePiece
-		throw new UnsupportedOperationException();
+	public IAAction placePiece(Plateau p) {
+		return difficulte.placePiece(p,pieces,couleur);
+	}
+	
+	/**
+	  * Permet de savoir si ce joueur est une IA pour appeler la method placePiece de l'IA
+	  * @return un boolean
+	  */
+	public boolean isIA() {
+
+		return true;
 	}
 
 }

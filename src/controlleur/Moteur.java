@@ -14,7 +14,14 @@ public class Moteur {
 	private Fenetre fenetre;
 	private Jeu jeu;
 	public static int volume;
-
+	
+	/**
+	  * This think do its job
+	  */
+	public Moteur() {
+		System.out.println("action");
+	}
+	
 	/**
 	 * Initalise la partie avec l'objet Jeu
 	 * @param j le jeu a lancer

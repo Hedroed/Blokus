@@ -11,7 +11,7 @@ import java.awt.event.*;
 *Le JPanel qui contient le plateau du jeu.
 *@extends AbstractFenetre
 */
-public class FenetrePartie extends AbstractFenetre {
+public class FenetrePartie extends AbstractPanneau {
 
 	private MenuPartie menu;
 	private Collection<Couleur> plateau;

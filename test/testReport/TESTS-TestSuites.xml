@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="Nathan" id="0" name="BlocTest" package="test" skipped="0" tests="2" time="0.172" timestamp="2016-06-03T14:50:17">
+  <testsuite errors="0" failures="0" hostname="Nathan" id="0" name="BlocTest" package="test" skipped="0" tests="2" time="0.252" timestamp="2016-06-08T08:17:40">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -22,15 +22,15 @@
 
           <property name="user.name" value="natha_000" />
 
-          <property name="ant.file.jesuistropfort" value="D:\Documents\Travail\ProjetBlokus\Blokus\build.xml" />
+          <property name="ant.file.jesuistropfort" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\build.xml" />
 
           <property name="ant.file.type.jesuistropfort" value="file" />
 
           <property name="user.language" value="fr" />
 
-          <property name="class.dir" value="D:\Documents\Travail\ProjetBlokus\Blokus\class" />
+          <property name="class.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\class" />
 
-          <property name="test.report.dir" value="D:\Documents\Travail\ProjetBlokus\Blokus\test\testReport" />
+          <property name="test.report.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test\testReport" />
 
           <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\bin" />
 
@@ -42,7 +42,7 @@
 
           <property name="user.timezone" value="" />
 
-          <property name="resources.dir" value="D:\Documents\Travail\ProjetBlokus\Blokus\resources" />
+          <property name="resources.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\resources" />
 
           <property name="sun.arch.data.model" value="64" />
 
@@ -58,7 +58,7 @@
 
           <property name="java.specification.name" value="Java Platform API Specification" />
 
-          <property name="test.html.dir" value="D:\Documents\Travail\ProjetBlokus\Blokus\test\html" />
+          <property name="test.html.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test\html" />
 
           <property name="java.class.version" value="52.0" />
 
@@ -68,7 +68,7 @@
 
           <property name="java.vm.info" value="mixed mode" />
 
-          <property name="ant.file" value="D:\Documents\Travail\ProjetBlokus\Blokus\build.xml" />
+          <property name="ant.file" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\build.xml" />
 
           <property name="os.version" value="6.3" />
 
@@ -94,7 +94,7 @@
 
           <property name="java.specification.vendor" value="Oracle Corporation" />
 
-          <property name="test.dir" value="D:\Documents\Travail\ProjetBlokus\Blokus\test" />
+          <property name="test.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test" />
 
           <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Java\jdk1.8.0_60\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Apache\apache-ant-1.9.7\bin;." />
 
@@ -104,9 +104,9 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner test.BlocTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,D:\Documents\Travail\ProjetBlokus\Blokus\test\testReport\TEST-test.BlocTest.xml crashfile=D:\Documents\Travail\ProjetBlokus\Blokus\junitvmwatcher4515759269043393978.properties propsfile=D:\Documents\Travail\ProjetBlokus\Blokus\junit3024726986907372407.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner test.BlocTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test\testReport\TEST-test.BlocTest.xml crashfile=C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\junitvmwatcher7883075126697049304.properties propsfile=C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\junit8832202060922465014.properties" />
 
-          <property name="java.class.path" value="D:\Documents\Travail\ProjetBlokus\Blokus\lib\junit-4.12.jar;D:\Documents\Travail\ProjetBlokus\Blokus\lib\hamcrest-core-1.3.jar;D:\Documents\Travail\ProjetBlokus\Blokus\class;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\junit-4.11.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-launcher.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-junit.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-junit4.jar" />
+          <property name="java.class.path" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\lib\junit-4.12.jar;C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\lib\hamcrest-core-1.3.jar;C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\class;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\junit-4.11.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-launcher.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-junit.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-junit4.jar" />
 
           <property name="ant.version" value="Apache Ant(TM) version 1.9.7 compiled on April 9 2016" />
 
@@ -130,13 +130,13 @@
 
           <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_60\jre\lib\ext;C:\Windows\Sun\Java\lib\ext" />
 
-          <property name="user.dir" value="D:\Documents\Travail\ProjetBlokus\Blokus" />
+          <property name="user.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus" />
 
           <property name="line.separator" value="&#xd;&#xa;" />
 
           <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
 
-          <property name="basedir" value="D:\Documents\Travail\ProjetBlokus\Blokus" />
+          <property name="basedir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus" />
 
           <property name="ant.java.version" value="1.8" />
 
@@ -148,22 +148,22 @@
 
           <property name="java.specification.version" value="1.8" />
 
-          <property name="src.dir" value="D:\Documents\Travail\ProjetBlokus\Blokus\src" />
+          <property name="src.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\src" />
 
           <property name="ant.project.invoked-targets" value="test-report" />
 
       </properties>
 
-      <testcase classname="test.BlocTest" name="testGetter" time="0.0" />
+      <testcase classname="test.BlocTest" name="testGetter" time="0.007" />
 
-      <testcase classname="test.BlocTest" name="testSetter" time="0.016" />
+      <testcase classname="test.BlocTest" name="testSetter" time="0.0" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Nathan" id="1" name="CouleurTest" package="test" skipped="0" tests="1" time="0.203" timestamp="2016-06-03T14:50:18">
+  <testsuite errors="0" failures="0" hostname="Nathan" id="1" name="CouleurTest" package="test" skipped="0" tests="1" time="0.2" timestamp="2016-06-08T08:17:41">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -185,15 +185,15 @@
 
           <property name="user.name" value="natha_000" />
 
-          <property name="ant.file.jesuistropfort" value="D:\Documents\Travail\ProjetBlokus\Blokus\build.xml" />
+          <property name="ant.file.jesuistropfort" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\build.xml" />
 
           <property name="ant.file.type.jesuistropfort" value="file" />
 
           <property name="user.language" value="fr" />
 
-          <property name="class.dir" value="D:\Documents\Travail\ProjetBlokus\Blokus\class" />
+          <property name="class.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\class" />
 
-          <property name="test.report.dir" value="D:\Documents\Travail\ProjetBlokus\Blokus\test\testReport" />
+          <property name="test.report.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test\testReport" />
 
           <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\bin" />
 
@@ -205,7 +205,7 @@
 
           <property name="user.timezone" value="" />
 
-          <property name="resources.dir" value="D:\Documents\Travail\ProjetBlokus\Blokus\resources" />
+          <property name="resources.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\resources" />
 
           <property name="sun.arch.data.model" value="64" />
 
@@ -221,7 +221,7 @@
 
           <property name="java.specification.name" value="Java Platform API Specification" />
 
-          <property name="test.html.dir" value="D:\Documents\Travail\ProjetBlokus\Blokus\test\html" />
+          <property name="test.html.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test\html" />
 
           <property name="java.class.version" value="52.0" />
 
@@ -231,7 +231,7 @@
 
           <property name="java.vm.info" value="mixed mode" />
 
-          <property name="ant.file" value="D:\Documents\Travail\ProjetBlokus\Blokus\build.xml" />
+          <property name="ant.file" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\build.xml" />
 
           <property name="os.version" value="6.3" />
 
@@ -257,7 +257,7 @@
 
           <property name="java.specification.vendor" value="Oracle Corporation" />
 
-          <property name="test.dir" value="D:\Documents\Travail\ProjetBlokus\Blokus\test" />
+          <property name="test.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test" />
 
           <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Java\jdk1.8.0_60\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Apache\apache-ant-1.9.7\bin;." />
 
@@ -267,9 +267,9 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner test.CouleurTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,D:\Documents\Travail\ProjetBlokus\Blokus\test\testReport\TEST-test.CouleurTest.xml crashfile=D:\Documents\Travail\ProjetBlokus\Blokus\junitvmwatcher5261629785740940628.properties propsfile=D:\Documents\Travail\ProjetBlokus\Blokus\junit9192410071688908945.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner test.CouleurTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test\testReport\TEST-test.CouleurTest.xml crashfile=C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\junitvmwatcher3572776372334800253.properties propsfile=C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\junit6259632772898594974.properties" />
 
-          <property name="java.class.path" value="D:\Documents\Travail\ProjetBlokus\Blokus\lib\junit-4.12.jar;D:\Documents\Travail\ProjetBlokus\Blokus\lib\hamcrest-core-1.3.jar;D:\Documents\Travail\ProjetBlokus\Blokus\class;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\junit-4.11.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-launcher.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-junit.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-junit4.jar" />
+          <property name="java.class.path" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\lib\junit-4.12.jar;C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\lib\hamcrest-core-1.3.jar;C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\class;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\junit-4.11.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-launcher.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-junit.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-junit4.jar" />
 
           <property name="ant.version" value="Apache Ant(TM) version 1.9.7 compiled on April 9 2016" />
 
@@ -293,13 +293,13 @@
 
           <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_60\jre\lib\ext;C:\Windows\Sun\Java\lib\ext" />
 
-          <property name="user.dir" value="D:\Documents\Travail\ProjetBlokus\Blokus" />
+          <property name="user.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus" />
 
           <property name="line.separator" value="&#xd;&#xa;" />
 
           <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
 
-          <property name="basedir" value="D:\Documents\Travail\ProjetBlokus\Blokus" />
+          <property name="basedir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus" />
 
           <property name="ant.java.version" value="1.8" />
 
@@ -311,20 +311,20 @@
 
           <property name="java.specification.version" value="1.8" />
 
-          <property name="src.dir" value="D:\Documents\Travail\ProjetBlokus\Blokus\src" />
+          <property name="src.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\src" />
 
           <property name="ant.project.invoked-targets" value="test-report" />
 
       </properties>
 
-      <testcase classname="test.CouleurTest" name="testEstCouleur" time="0.015" />
+      <testcase classname="test.CouleurTest" name="testEstCouleur" time="0.003" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Nathan" id="2" name="MoteurTest" package="test" skipped="0" tests="1" time="0.235" timestamp="2016-06-03T14:50:19">
+  <testsuite errors="0" failures="0" hostname="Nathan" id="2" name="IATest" package="test" skipped="0" tests="1" time="0.189" timestamp="2016-06-08T08:17:43">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -346,15 +346,15 @@
 
           <property name="user.name" value="natha_000" />
 
-          <property name="ant.file.jesuistropfort" value="D:\Documents\Travail\ProjetBlokus\Blokus\build.xml" />
+          <property name="ant.file.jesuistropfort" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\build.xml" />
 
           <property name="ant.file.type.jesuistropfort" value="file" />
 
           <property name="user.language" value="fr" />
 
-          <property name="class.dir" value="D:\Documents\Travail\ProjetBlokus\Blokus\class" />
+          <property name="class.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\class" />
 
-          <property name="test.report.dir" value="D:\Documents\Travail\ProjetBlokus\Blokus\test\testReport" />
+          <property name="test.report.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test\testReport" />
 
           <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\bin" />
 
@@ -366,7 +366,7 @@
 
           <property name="user.timezone" value="" />
 
-          <property name="resources.dir" value="D:\Documents\Travail\ProjetBlokus\Blokus\resources" />
+          <property name="resources.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\resources" />
 
           <property name="sun.arch.data.model" value="64" />
 
@@ -382,7 +382,7 @@
 
           <property name="java.specification.name" value="Java Platform API Specification" />
 
-          <property name="test.html.dir" value="D:\Documents\Travail\ProjetBlokus\Blokus\test\html" />
+          <property name="test.html.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test\html" />
 
           <property name="java.class.version" value="52.0" />
 
@@ -392,7 +392,7 @@
 
           <property name="java.vm.info" value="mixed mode" />
 
-          <property name="ant.file" value="D:\Documents\Travail\ProjetBlokus\Blokus\build.xml" />
+          <property name="ant.file" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\build.xml" />
 
           <property name="os.version" value="6.3" />
 
@@ -418,7 +418,7 @@
 
           <property name="java.specification.vendor" value="Oracle Corporation" />
 
-          <property name="test.dir" value="D:\Documents\Travail\ProjetBlokus\Blokus\test" />
+          <property name="test.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test" />
 
           <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Java\jdk1.8.0_60\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Apache\apache-ant-1.9.7\bin;." />
 
@@ -428,9 +428,9 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner test.MoteurTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,D:\Documents\Travail\ProjetBlokus\Blokus\test\testReport\TEST-test.MoteurTest.xml crashfile=D:\Documents\Travail\ProjetBlokus\Blokus\junitvmwatcher46129135830632313.properties propsfile=D:\Documents\Travail\ProjetBlokus\Blokus\junit1450233039531747327.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner test.IATest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test\testReport\TEST-test.IATest.xml crashfile=C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\junitvmwatcher2029719692145333430.properties propsfile=C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\junit1820693735536126523.properties" />
 
-          <property name="java.class.path" value="D:\Documents\Travail\ProjetBlokus\Blokus\lib\junit-4.12.jar;D:\Documents\Travail\ProjetBlokus\Blokus\lib\hamcrest-core-1.3.jar;D:\Documents\Travail\ProjetBlokus\Blokus\class;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\junit-4.11.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-launcher.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-junit.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-junit4.jar" />
+          <property name="java.class.path" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\lib\junit-4.12.jar;C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\lib\hamcrest-core-1.3.jar;C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\class;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\junit-4.11.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-launcher.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-junit.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-junit4.jar" />
 
           <property name="ant.version" value="Apache Ant(TM) version 1.9.7 compiled on April 9 2016" />
 
@@ -454,13 +454,13 @@
 
           <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_60\jre\lib\ext;C:\Windows\Sun\Java\lib\ext" />
 
-          <property name="user.dir" value="D:\Documents\Travail\ProjetBlokus\Blokus" />
+          <property name="user.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus" />
 
           <property name="line.separator" value="&#xd;&#xa;" />
 
           <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
 
-          <property name="basedir" value="D:\Documents\Travail\ProjetBlokus\Blokus" />
+          <property name="basedir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus" />
 
           <property name="ant.java.version" value="1.8" />
 
@@ -472,20 +472,20 @@
 
           <property name="java.specification.version" value="1.8" />
 
-          <property name="src.dir" value="D:\Documents\Travail\ProjetBlokus\Blokus\src" />
+          <property name="src.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\src" />
 
           <property name="ant.project.invoked-targets" value="test-report" />
 
       </properties>
 
-      <testcase classname="test.MoteurTest" name="testMoteur" time="0.0" />
+      <testcase classname="test.IATest" name="testConstructor" time="0.024" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Nathan" id="3" name="PieceTest" package="test" skipped="0" tests="4" time="0.203" timestamp="2016-06-03T14:50:20">
+  <testsuite errors="0" failures="0" hostname="Nathan" id="3" name="JeuTest" package="test" skipped="0" tests="2" time="0.273" timestamp="2016-06-08T08:17:44">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -507,15 +507,15 @@
 
           <property name="user.name" value="natha_000" />
 
-          <property name="ant.file.jesuistropfort" value="D:\Documents\Travail\ProjetBlokus\Blokus\build.xml" />
+          <property name="ant.file.jesuistropfort" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\build.xml" />
 
           <property name="ant.file.type.jesuistropfort" value="file" />
 
           <property name="user.language" value="fr" />
 
-          <property name="class.dir" value="D:\Documents\Travail\ProjetBlokus\Blokus\class" />
+          <property name="class.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\class" />
 
-          <property name="test.report.dir" value="D:\Documents\Travail\ProjetBlokus\Blokus\test\testReport" />
+          <property name="test.report.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test\testReport" />
 
           <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\bin" />
 
@@ -527,7 +527,7 @@
 
           <property name="user.timezone" value="" />
 
-          <property name="resources.dir" value="D:\Documents\Travail\ProjetBlokus\Blokus\resources" />
+          <property name="resources.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\resources" />
 
           <property name="sun.arch.data.model" value="64" />
 
@@ -543,7 +543,7 @@
 
           <property name="java.specification.name" value="Java Platform API Specification" />
 
-          <property name="test.html.dir" value="D:\Documents\Travail\ProjetBlokus\Blokus\test\html" />
+          <property name="test.html.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test\html" />
 
           <property name="java.class.version" value="52.0" />
 
@@ -553,7 +553,7 @@
 
           <property name="java.vm.info" value="mixed mode" />
 
-          <property name="ant.file" value="D:\Documents\Travail\ProjetBlokus\Blokus\build.xml" />
+          <property name="ant.file" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\build.xml" />
 
           <property name="os.version" value="6.3" />
 
@@ -579,7 +579,7 @@
 
           <property name="java.specification.vendor" value="Oracle Corporation" />
 
-          <property name="test.dir" value="D:\Documents\Travail\ProjetBlokus\Blokus\test" />
+          <property name="test.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test" />
 
           <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Java\jdk1.8.0_60\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Apache\apache-ant-1.9.7\bin;." />
 
@@ -589,9 +589,9 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner test.PieceTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,D:\Documents\Travail\ProjetBlokus\Blokus\test\testReport\TEST-test.PieceTest.xml crashfile=D:\Documents\Travail\ProjetBlokus\Blokus\junitvmwatcher5235116297611658904.properties propsfile=D:\Documents\Travail\ProjetBlokus\Blokus\junit2310926468857531486.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner test.JeuTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test\testReport\TEST-test.JeuTest.xml crashfile=C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\junitvmwatcher921045861902439806.properties propsfile=C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\junit2047483679143631365.properties" />
 
-          <property name="java.class.path" value="D:\Documents\Travail\ProjetBlokus\Blokus\lib\junit-4.12.jar;D:\Documents\Travail\ProjetBlokus\Blokus\lib\hamcrest-core-1.3.jar;D:\Documents\Travail\ProjetBlokus\Blokus\class;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\junit-4.11.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-launcher.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-junit.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-junit4.jar" />
+          <property name="java.class.path" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\lib\junit-4.12.jar;C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\lib\hamcrest-core-1.3.jar;C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\class;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\junit-4.11.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-launcher.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-junit.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-junit4.jar" />
 
           <property name="ant.version" value="Apache Ant(TM) version 1.9.7 compiled on April 9 2016" />
 
@@ -615,13 +615,13 @@
 
           <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_60\jre\lib\ext;C:\Windows\Sun\Java\lib\ext" />
 
-          <property name="user.dir" value="D:\Documents\Travail\ProjetBlokus\Blokus" />
+          <property name="user.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus" />
 
           <property name="line.separator" value="&#xd;&#xa;" />
 
           <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
 
-          <property name="basedir" value="D:\Documents\Travail\ProjetBlokus\Blokus" />
+          <property name="basedir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus" />
 
           <property name="ant.java.version" value="1.8" />
 
@@ -633,19 +633,677 @@
 
           <property name="java.specification.version" value="1.8" />
 
-          <property name="src.dir" value="D:\Documents\Travail\ProjetBlokus\Blokus\src" />
+          <property name="src.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\src" />
 
           <property name="ant.project.invoked-targets" value="test-report" />
 
       </properties>
 
-      <testcase classname="test.PieceTest" name="testEquals2" time="0.016" />
+      <testcase classname="test.JeuTest" name="testConstructeur" time="0.056" />
+
+      <testcase classname="test.JeuTest" name="testNouveauTour" time="0.021" />
+
+      <system-out><![CDATA[Nouveau tour 0 nb joueur 4
+]]></system-out>
+
+      <system-err><![CDATA[]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="Nathan" id="4" name="JoueurTest" package="test" skipped="0" tests="2" time="0.207" timestamp="2016-06-08T08:17:45">
+      <properties>
+          <property name="java.vendor" value="Oracle Corporation" />
+
+          <property name="sun.java.launcher" value="SUN_STANDARD" />
+
+          <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+
+          <property name="os.name" value="Windows 8.1" />
+
+          <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_60\jre\classes" />
+
+          <property name="sun.desktop" value="windows" />
+
+          <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+
+          <property name="ant.home" value="C:\Program Files (x86)\Apache\apache-ant-1.9.7" />
+
+          <property name="java.runtime.version" value="1.8.0_60-b27" />
+
+          <property name="user.name" value="natha_000" />
+
+          <property name="ant.file.jesuistropfort" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\build.xml" />
+
+          <property name="ant.file.type.jesuistropfort" value="file" />
+
+          <property name="user.language" value="fr" />
+
+          <property name="class.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\class" />
+
+          <property name="test.report.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test\testReport" />
+
+          <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\bin" />
+
+          <property name="ant.project.default-target" value="run" />
+
+          <property name="ant.project.name" value="jesuistropfort" />
+
+          <property name="java.version" value="1.8.0_60" />
+
+          <property name="user.timezone" value="" />
+
+          <property name="resources.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\resources" />
+
+          <property name="sun.arch.data.model" value="64" />
+
+          <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_60\jre\lib\endorsed" />
+
+          <property name="sun.cpu.isalist" value="amd64" />
+
+          <property name="sun.jnu.encoding" value="Cp1252" />
+
+          <property name="file.encoding.pkg" value="sun.io" />
+
+          <property name="file.separator" value="\" />
+
+          <property name="java.specification.name" value="Java Platform API Specification" />
+
+          <property name="test.html.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test\html" />
+
+          <property name="java.class.version" value="52.0" />
+
+          <property name="user.country" value="FR" />
+
+          <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_60\jre" />
+
+          <property name="java.vm.info" value="mixed mode" />
+
+          <property name="ant.file" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\build.xml" />
+
+          <property name="os.version" value="6.3" />
+
+          <property name="path.separator" value=";" />
+
+          <property name="java.vm.version" value="25.60-b23" />
+
+          <property name="user.variant" value="" />
+
+          <property name="ant.library.dir" value="C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib" />
+
+          <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+
+          <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+
+          <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+
+          <property name="sun.stdout.encoding" value="cp850" />
+
+          <property name="user.script" value="" />
+
+          <property name="user.home" value="C:\Users\natha_000" />
+
+          <property name="java.specification.vendor" value="Oracle Corporation" />
+
+          <property name="test.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test" />
+
+          <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Java\jdk1.8.0_60\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Apache\apache-ant-1.9.7\bin;." />
+
+          <property name="java.vendor.url" value="http://java.oracle.com/" />
+
+          <property name="java.vm.vendor" value="Oracle Corporation" />
+
+          <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner test.JoueurTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test\testReport\TEST-test.JoueurTest.xml crashfile=C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\junitvmwatcher5226562715300466081.properties propsfile=C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\junit5123956647577596262.properties" />
+
+          <property name="java.class.path" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\lib\junit-4.12.jar;C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\lib\hamcrest-core-1.3.jar;C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\class;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\junit-4.11.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-launcher.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-junit.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-junit4.jar" />
+
+          <property name="ant.version" value="Apache Ant(TM) version 1.9.7 compiled on April 9 2016" />
+
+          <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+
+          <property name="ant.file.type" value="file" />
+
+          <property name="java.vm.specification.version" value="1.8" />
+
+          <property name="sun.cpu.endian" value="little" />
+
+          <property name="sun.os.patch.level" value="" />
+
+          <property name="java.io.tmpdir" value="C:\Users\NATHA_~1\AppData\Local\Temp\" />
+
+          <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+
+          <property name="os.arch" value="amd64" />
+
+          <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+
+          <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_60\jre\lib\ext;C:\Windows\Sun\Java\lib\ext" />
+
+          <property name="user.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus" />
+
+          <property name="line.separator" value="&#xd;&#xa;" />
+
+          <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+
+          <property name="basedir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus" />
+
+          <property name="ant.java.version" value="1.8" />
+
+          <property name="ant.core.lib" value="C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant.jar" />
+
+          <property name="file.encoding" value="Cp1252" />
+
+          <property name="sun.stderr.encoding" value="cp850" />
+
+          <property name="java.specification.version" value="1.8" />
+
+          <property name="src.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\src" />
+
+          <property name="ant.project.invoked-targets" value="test-report" />
+
+      </properties>
+
+      <testcase classname="test.JoueurTest" name="testJouerPiece" time="0.031" />
+
+      <testcase classname="test.JoueurTest" name="testConstructor" time="0.007" />
+
+      <system-out><![CDATA[]]></system-out>
+
+      <system-err><![CDATA[]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="Nathan" id="5" name="MoteurTest" package="test" skipped="0" tests="1" time="0.154" timestamp="2016-06-08T08:17:46">
+      <properties>
+          <property name="java.vendor" value="Oracle Corporation" />
+
+          <property name="sun.java.launcher" value="SUN_STANDARD" />
+
+          <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+
+          <property name="os.name" value="Windows 8.1" />
+
+          <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_60\jre\classes" />
+
+          <property name="sun.desktop" value="windows" />
+
+          <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+
+          <property name="ant.home" value="C:\Program Files (x86)\Apache\apache-ant-1.9.7" />
+
+          <property name="java.runtime.version" value="1.8.0_60-b27" />
+
+          <property name="user.name" value="natha_000" />
+
+          <property name="ant.file.jesuistropfort" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\build.xml" />
+
+          <property name="ant.file.type.jesuistropfort" value="file" />
+
+          <property name="user.language" value="fr" />
+
+          <property name="class.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\class" />
+
+          <property name="test.report.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test\testReport" />
+
+          <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\bin" />
+
+          <property name="ant.project.default-target" value="run" />
+
+          <property name="ant.project.name" value="jesuistropfort" />
+
+          <property name="java.version" value="1.8.0_60" />
+
+          <property name="user.timezone" value="" />
+
+          <property name="resources.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\resources" />
+
+          <property name="sun.arch.data.model" value="64" />
+
+          <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_60\jre\lib\endorsed" />
+
+          <property name="sun.cpu.isalist" value="amd64" />
+
+          <property name="sun.jnu.encoding" value="Cp1252" />
+
+          <property name="file.encoding.pkg" value="sun.io" />
+
+          <property name="file.separator" value="\" />
+
+          <property name="java.specification.name" value="Java Platform API Specification" />
+
+          <property name="test.html.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test\html" />
+
+          <property name="java.class.version" value="52.0" />
+
+          <property name="user.country" value="FR" />
+
+          <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_60\jre" />
+
+          <property name="java.vm.info" value="mixed mode" />
+
+          <property name="ant.file" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\build.xml" />
+
+          <property name="os.version" value="6.3" />
+
+          <property name="path.separator" value=";" />
+
+          <property name="java.vm.version" value="25.60-b23" />
+
+          <property name="user.variant" value="" />
+
+          <property name="ant.library.dir" value="C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib" />
+
+          <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+
+          <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+
+          <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+
+          <property name="sun.stdout.encoding" value="cp850" />
+
+          <property name="user.script" value="" />
+
+          <property name="user.home" value="C:\Users\natha_000" />
+
+          <property name="java.specification.vendor" value="Oracle Corporation" />
+
+          <property name="test.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test" />
+
+          <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Java\jdk1.8.0_60\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Apache\apache-ant-1.9.7\bin;." />
+
+          <property name="java.vendor.url" value="http://java.oracle.com/" />
+
+          <property name="java.vm.vendor" value="Oracle Corporation" />
+
+          <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner test.MoteurTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test\testReport\TEST-test.MoteurTest.xml crashfile=C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\junitvmwatcher915714550665197670.properties propsfile=C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\junit8527823893892578462.properties" />
+
+          <property name="java.class.path" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\lib\junit-4.12.jar;C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\lib\hamcrest-core-1.3.jar;C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\class;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\junit-4.11.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-launcher.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-junit.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-junit4.jar" />
+
+          <property name="ant.version" value="Apache Ant(TM) version 1.9.7 compiled on April 9 2016" />
+
+          <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+
+          <property name="ant.file.type" value="file" />
+
+          <property name="java.vm.specification.version" value="1.8" />
+
+          <property name="sun.cpu.endian" value="little" />
+
+          <property name="sun.os.patch.level" value="" />
+
+          <property name="java.io.tmpdir" value="C:\Users\NATHA_~1\AppData\Local\Temp\" />
+
+          <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+
+          <property name="os.arch" value="amd64" />
+
+          <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+
+          <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_60\jre\lib\ext;C:\Windows\Sun\Java\lib\ext" />
+
+          <property name="user.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus" />
+
+          <property name="line.separator" value="&#xd;&#xa;" />
+
+          <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+
+          <property name="basedir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus" />
+
+          <property name="ant.java.version" value="1.8" />
+
+          <property name="ant.core.lib" value="C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant.jar" />
+
+          <property name="file.encoding" value="Cp1252" />
+
+          <property name="sun.stderr.encoding" value="cp850" />
+
+          <property name="java.specification.version" value="1.8" />
+
+          <property name="src.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\src" />
+
+          <property name="ant.project.invoked-targets" value="test-report" />
+
+      </properties>
+
+      <testcase classname="test.MoteurTest" name="testMoteur" time="0.007" />
+
+      <system-out><![CDATA[]]></system-out>
+
+      <system-err><![CDATA[]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="Nathan" id="6" name="PieceTest" package="test" skipped="0" tests="4" time="0.133" timestamp="2016-06-08T08:17:47">
+      <properties>
+          <property name="java.vendor" value="Oracle Corporation" />
+
+          <property name="sun.java.launcher" value="SUN_STANDARD" />
+
+          <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+
+          <property name="os.name" value="Windows 8.1" />
+
+          <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_60\jre\classes" />
+
+          <property name="sun.desktop" value="windows" />
+
+          <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+
+          <property name="ant.home" value="C:\Program Files (x86)\Apache\apache-ant-1.9.7" />
+
+          <property name="java.runtime.version" value="1.8.0_60-b27" />
+
+          <property name="user.name" value="natha_000" />
+
+          <property name="ant.file.jesuistropfort" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\build.xml" />
+
+          <property name="ant.file.type.jesuistropfort" value="file" />
+
+          <property name="user.language" value="fr" />
+
+          <property name="class.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\class" />
+
+          <property name="test.report.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test\testReport" />
+
+          <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\bin" />
+
+          <property name="ant.project.default-target" value="run" />
+
+          <property name="ant.project.name" value="jesuistropfort" />
+
+          <property name="java.version" value="1.8.0_60" />
+
+          <property name="user.timezone" value="" />
+
+          <property name="resources.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\resources" />
+
+          <property name="sun.arch.data.model" value="64" />
+
+          <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_60\jre\lib\endorsed" />
+
+          <property name="sun.cpu.isalist" value="amd64" />
+
+          <property name="sun.jnu.encoding" value="Cp1252" />
+
+          <property name="file.encoding.pkg" value="sun.io" />
+
+          <property name="file.separator" value="\" />
+
+          <property name="java.specification.name" value="Java Platform API Specification" />
+
+          <property name="test.html.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test\html" />
+
+          <property name="java.class.version" value="52.0" />
+
+          <property name="user.country" value="FR" />
+
+          <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_60\jre" />
+
+          <property name="java.vm.info" value="mixed mode" />
+
+          <property name="ant.file" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\build.xml" />
+
+          <property name="os.version" value="6.3" />
+
+          <property name="path.separator" value=";" />
+
+          <property name="java.vm.version" value="25.60-b23" />
+
+          <property name="user.variant" value="" />
+
+          <property name="ant.library.dir" value="C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib" />
+
+          <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+
+          <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+
+          <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+
+          <property name="sun.stdout.encoding" value="cp850" />
+
+          <property name="user.script" value="" />
+
+          <property name="user.home" value="C:\Users\natha_000" />
+
+          <property name="java.specification.vendor" value="Oracle Corporation" />
+
+          <property name="test.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test" />
+
+          <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Java\jdk1.8.0_60\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Apache\apache-ant-1.9.7\bin;." />
+
+          <property name="java.vendor.url" value="http://java.oracle.com/" />
+
+          <property name="java.vm.vendor" value="Oracle Corporation" />
+
+          <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner test.PieceTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test\testReport\TEST-test.PieceTest.xml crashfile=C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\junitvmwatcher4274483798420909440.properties propsfile=C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\junit8476117168336535376.properties" />
+
+          <property name="java.class.path" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\lib\junit-4.12.jar;C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\lib\hamcrest-core-1.3.jar;C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\class;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\junit-4.11.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-launcher.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-junit.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-junit4.jar" />
+
+          <property name="ant.version" value="Apache Ant(TM) version 1.9.7 compiled on April 9 2016" />
+
+          <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+
+          <property name="ant.file.type" value="file" />
+
+          <property name="java.vm.specification.version" value="1.8" />
+
+          <property name="sun.cpu.endian" value="little" />
+
+          <property name="sun.os.patch.level" value="" />
+
+          <property name="java.io.tmpdir" value="C:\Users\NATHA_~1\AppData\Local\Temp\" />
+
+          <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+
+          <property name="os.arch" value="amd64" />
+
+          <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+
+          <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_60\jre\lib\ext;C:\Windows\Sun\Java\lib\ext" />
+
+          <property name="user.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus" />
+
+          <property name="line.separator" value="&#xd;&#xa;" />
+
+          <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+
+          <property name="basedir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus" />
+
+          <property name="ant.java.version" value="1.8" />
+
+          <property name="ant.core.lib" value="C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant.jar" />
+
+          <property name="file.encoding" value="Cp1252" />
+
+          <property name="sun.stderr.encoding" value="cp850" />
+
+          <property name="java.specification.version" value="1.8" />
+
+          <property name="src.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\src" />
+
+          <property name="ant.project.invoked-targets" value="test-report" />
+
+      </properties>
+
+      <testcase classname="test.PieceTest" name="testEquals2" time="0.003" />
 
       <testcase classname="test.PieceTest" name="testConstructor1" time="0.0" />
 
       <testcase classname="test.PieceTest" name="testConstructor2" time="0.0" />
 
-      <testcase classname="test.PieceTest" name="testEquals" time="0.0" />
+      <testcase classname="test.PieceTest" name="testEquals" time="0.004" />
+
+      <system-out><![CDATA[]]></system-out>
+
+      <system-err><![CDATA[]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="Nathan" id="7" name="PlateauTest" package="test" skipped="0" tests="3" time="0.168" timestamp="2016-06-08T08:17:47">
+      <properties>
+          <property name="java.vendor" value="Oracle Corporation" />
+
+          <property name="sun.java.launcher" value="SUN_STANDARD" />
+
+          <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+
+          <property name="os.name" value="Windows 8.1" />
+
+          <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_60\jre\classes" />
+
+          <property name="sun.desktop" value="windows" />
+
+          <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+
+          <property name="ant.home" value="C:\Program Files (x86)\Apache\apache-ant-1.9.7" />
+
+          <property name="java.runtime.version" value="1.8.0_60-b27" />
+
+          <property name="user.name" value="natha_000" />
+
+          <property name="ant.file.jesuistropfort" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\build.xml" />
+
+          <property name="ant.file.type.jesuistropfort" value="file" />
+
+          <property name="user.language" value="fr" />
+
+          <property name="class.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\class" />
+
+          <property name="test.report.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test\testReport" />
+
+          <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\bin" />
+
+          <property name="ant.project.default-target" value="run" />
+
+          <property name="ant.project.name" value="jesuistropfort" />
+
+          <property name="java.version" value="1.8.0_60" />
+
+          <property name="user.timezone" value="" />
+
+          <property name="resources.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\resources" />
+
+          <property name="sun.arch.data.model" value="64" />
+
+          <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_60\jre\lib\endorsed" />
+
+          <property name="sun.cpu.isalist" value="amd64" />
+
+          <property name="sun.jnu.encoding" value="Cp1252" />
+
+          <property name="file.encoding.pkg" value="sun.io" />
+
+          <property name="file.separator" value="\" />
+
+          <property name="java.specification.name" value="Java Platform API Specification" />
+
+          <property name="test.html.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test\html" />
+
+          <property name="java.class.version" value="52.0" />
+
+          <property name="user.country" value="FR" />
+
+          <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_60\jre" />
+
+          <property name="java.vm.info" value="mixed mode" />
+
+          <property name="ant.file" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\build.xml" />
+
+          <property name="os.version" value="6.3" />
+
+          <property name="path.separator" value=";" />
+
+          <property name="java.vm.version" value="25.60-b23" />
+
+          <property name="user.variant" value="" />
+
+          <property name="ant.library.dir" value="C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib" />
+
+          <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+
+          <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+
+          <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+
+          <property name="sun.stdout.encoding" value="cp850" />
+
+          <property name="user.script" value="" />
+
+          <property name="user.home" value="C:\Users\natha_000" />
+
+          <property name="java.specification.vendor" value="Oracle Corporation" />
+
+          <property name="test.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test" />
+
+          <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Java\jdk1.8.0_60\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Apache\apache-ant-1.9.7\bin;." />
+
+          <property name="java.vendor.url" value="http://java.oracle.com/" />
+
+          <property name="java.vm.vendor" value="Oracle Corporation" />
+
+          <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner test.PlateauTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\test\testReport\TEST-test.PlateauTest.xml crashfile=C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\junitvmwatcher5532264143812812638.properties propsfile=C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\junit3031299556586837332.properties" />
+
+          <property name="java.class.path" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\lib\junit-4.12.jar;C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\lib\hamcrest-core-1.3.jar;C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\class;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\junit-4.11.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-launcher.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-junit.jar;C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant-junit4.jar" />
+
+          <property name="ant.version" value="Apache Ant(TM) version 1.9.7 compiled on April 9 2016" />
+
+          <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+
+          <property name="ant.file.type" value="file" />
+
+          <property name="java.vm.specification.version" value="1.8" />
+
+          <property name="sun.cpu.endian" value="little" />
+
+          <property name="sun.os.patch.level" value="" />
+
+          <property name="java.io.tmpdir" value="C:\Users\NATHA_~1\AppData\Local\Temp\" />
+
+          <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+
+          <property name="os.arch" value="amd64" />
+
+          <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+
+          <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_60\jre\lib\ext;C:\Windows\Sun\Java\lib\ext" />
+
+          <property name="user.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus" />
+
+          <property name="line.separator" value="&#xd;&#xa;" />
+
+          <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+
+          <property name="basedir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus" />
+
+          <property name="ant.java.version" value="1.8" />
+
+          <property name="ant.core.lib" value="C:\Program Files (x86)\Apache\apache-ant-1.9.7\lib\ant.jar" />
+
+          <property name="file.encoding" value="Cp1252" />
+
+          <property name="sun.stderr.encoding" value="cp850" />
+
+          <property name="java.specification.version" value="1.8" />
+
+          <property name="src.dir" value="C:\Users\natha_000\Dropbox\Dossier de l&apos;équipe Best Blokus Project\LAY RYDIN projet\Blokus\src" />
+
+          <property name="ant.project.invoked-targets" value="test-report" />
+
+      </properties>
+
+      <testcase classname="test.PlateauTest" name="testTrouveEnterPossible" time="0.011" />
+
+      <testcase classname="test.PlateauTest" name="testPlacePiece" time="0.018">
+          <failure type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError
+	at test.PlateauTest.testPlacePiece(Unknown Source)
+</failure>
+
+      </testcase>
+
+      <testcase classname="test.PlateauTest" name="testConstructor" time="0.0" />
 
       <system-out><![CDATA[]]></system-out>
 
