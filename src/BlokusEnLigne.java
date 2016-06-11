@@ -11,12 +11,12 @@ public class BlokusEnLigne {
 	
 	public static void main(String[] args) {
 		
-		Joueur[] lesJoueurs = new Joueur[1];
+		Joueur[] lesJoueurs = new Joueur[4];
 		
-		lesJoueurs[0] = new IA("Patrik",Bloc.VERT,DifficulteFactory.FACILE);
-		// lesJoueurs[1] = new IA("Kevin",Bloc.VERT,DifficulteFactory.FACILE);
-		// lesJoueurs[2] = new IA("Michel",Bloc.JAUNE,DifficulteFactory.FACILE);
-		// lesJoueurs[3] = new IA("René",Bloc.BLEU,DifficulteFactory.FACILE);
+		lesJoueurs[0] = new IA("Patrik",Bloc.ROUGE,DifficulteFactory.FACILE);
+		lesJoueurs[1] = new IA("Kevin",Bloc.VERT,DifficulteFactory.FACILE);
+		lesJoueurs[2] = new IA("Michel",Bloc.JAUNE,DifficulteFactory.FACILE);
+		lesJoueurs[3] = new IA("René",Bloc.BLEU,DifficulteFactory.FACILE);
 		
 		Jeu jeu = new Jeu(lesJoueurs);
 		

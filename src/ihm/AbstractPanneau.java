@@ -13,22 +13,23 @@ public abstract class AbstractPanneau extends JPanel{
 
 	private Son son;
 	protected Image fond;
-	private Moteur moteur;
+	protected Controlleur control;
 
 	/**
 	 * Constructeur
 	 * @param m le Moteur
 	 */
-	public AbstractPanneau(Moteur m) {
-		if(m == null) {throw new IllegalArgumentException("Moteur null");}
+	public AbstractPanneau(Controlleur c) {
+		if(c == null) {throw new IllegalArgumentException("Controlleur null");}
 		
-		moteur = m;
+		control = c;
 		
 	}
 	
-	protected void setFond(String path) {
-		fond = Fenetre.loadImage(path);
-	}
+	/**
+	  * Positionne les éléments sur le panneau
+	  */
+	public abstract void calculePositions();
 	
 	/**
 	  * Methode permettant de faire une transition/animation quand la fenetre apparait

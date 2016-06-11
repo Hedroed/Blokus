@@ -10,6 +10,8 @@ import java.util.ArrayList;
   */
 public class Moyen implements Difficulte {
 
-	public void placePiece(Jeu j, ArrayList<Piece> p, Couleur c) {}
+	public IAAction placePiece(Plateau plateau, ArrayList<Piece> pieces, int c) {
+		return null;
+	}
 	
 }
