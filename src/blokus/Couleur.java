@@ -10,6 +10,11 @@ public final class Couleur {
 	public static final String VERT = "vert";
 	public static final String JAUNE = "jaune";
 	
+	/**
+	*Determine si la chaine rentree ne parametre equivaut a une couleur
+	*@param s le String a analyser
+	*@return vrai si le String est reconnu, faux sinon
+	**/
 	public static boolean estCouleur(String s) {
 		boolean ret = false;
 		

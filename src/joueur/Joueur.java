@@ -1,3 +1,6 @@
+/**
+*Ce package contient les programmes qui gerent les interactions des joueurs.
+**/
 package joueur;
 
 import java.util.*;
@@ -8,8 +11,9 @@ import java.io.*;
   * Le Joueur contient tout les parametres d'un joueur durant une partie de Blokus
   * Une liste de pieces, une couleur et un nom
   * Il permet de savoir quel joueur est en train de jouer.
+  * implements Serializable
   */
-public class Joueur {
+public class Joueur implements Serializable{
 
 	protected ArrayList<Piece> pieces;
 	protected int couleur;
@@ -160,15 +164,15 @@ public class Joueur {
 	public void jouerPiece(Piece p) {
 		if(p == null) {throw new IllegalArgumentException("Parametre null");}
 		
-		score += p.getLongueur();
-		
-		pieces.remove(p);
+		if(pieces.remove(p)) {
+			score += p.getLongueur();
+		}
 		
 	}
 	
 	/**
 	*Retourne la couleur du joueur
-	*
+	*@return un int
 	*/
 	public int getCouleur(){
 		return couleur;
@@ -176,7 +180,7 @@ public class Joueur {
 	
 	/**
 	*Retourne le jeu de pieces du joueur
-	*
+	*@return la liste des pieces
 	*/
 	public ArrayList<Piece> getPieces(){
 		return pieces;
@@ -184,7 +188,7 @@ public class Joueur {
 	
 	/**
 	*Met les caracteristiques du joueur dans un String
-	*
+	*@return le String contenant les infos
 	*/
 	public String toString(){
 		String ret =(this.nom+" de couleur "+this.couleur);
@@ -193,7 +197,7 @@ public class Joueur {
 	
 	/**
 	*Retourne l'etat du joueur, si il peut encore placer une piece sur le plateau
-	*
+	*@return vrai si le jouer peut jouer, faux sinon
 	*/
 	public boolean peutJouer() {
 		return peutJouer;

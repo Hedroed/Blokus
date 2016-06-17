@@ -2,6 +2,7 @@ package blokus;
 
 import java.util.*;
 import joueur.*;
+import IA.*;
 
 import java.awt.Point;
 
@@ -9,7 +10,7 @@ import java.awt.Point;
   * Le Jeu represente toute une partie de Blokus 
   * il contient les joueurs/IA le plateau de jeu, la piece selectionné et d'autre indicateur comme le temps de jeu et le nombre de tours
   */
-public class Jeu {
+public class Jeu{
 
 	private Joueur[] joueurs;
 	private Plateau plateau;
@@ -19,6 +20,10 @@ public class Jeu {
 	private int tour;
 	private int indiceJoueurActif;
 	
+	/**
+	*Constructeur de la classe Jeu
+	*@param js le tableau de joueurs
+	**/
 	public Jeu(Joueur[] js) {
 		if(js == null) {throw new IllegalArgumentException("joueurs null");}
 		joueurs = js;
@@ -27,22 +32,30 @@ public class Jeu {
 		tour = 0;
 		indiceJoueurActif = 0;
 		temps = 0;
+		
+		plateau.trouveEnterPossible(getJoueurActif().getCouleur());
 	}
-	
-	public Jeu(Joueur[] js, int[][] plat, int temps) {
+	/**
+	*Constructeur de la classe Jeu en cas de chargement de partie
+	*@param js le tableau de joueurs
+	*@param plat le plateau du jeu
+	*@param tour le numero de tour
+	*@param actif le Joueur a qui que c'est de jouer
+	**/
+	public Jeu(Joueur[] js, Plateau plat, int tour, int actif) {
 		if(js == null) {throw new IllegalArgumentException("joueurs null");}
 		joueurs = js;
 		
 		if(plat == null) {throw new IllegalArgumentException("plateau null");}
-		plateau = new Plateau(plat);
+		plateau = plat;
 		
-		tour = 0;
-		indiceJoueurActif = 0;
-		this.temps = temps;
+		this.tour = tour;
+		indiceJoueurActif = actif;
 	}
 	
 	/**
 	  * Passe au tour suivant, increment l'attribut tour et passe au joueur suivant
+	  *@return vrai si au mois un joueur peut encore jouer, faux sinon
 	  */
 	public boolean nouveauTour() {
 		//check si le joueur peut continuer a joueur, sinon le retire de la partie
@@ -77,7 +90,8 @@ public class Jeu {
 			}
 		}
 		
-		System.out.println("Nouveau tour "+tour+" nb joueur "+nbJoueur);
+		// System.out.println("Nouveau tour "+tour+" nb joueur "+nbJoueur);
+		plateau.trouveEnterPossible(getJoueurActif().getCouleur());
 		
 		return nbJoueur <= 0;
 	}
@@ -87,7 +101,7 @@ public class Jeu {
 	 * @param p la piece
 	 */
 	public void selectionnePiece(Piece p) {
-		if(p.getCouleur() == getJoueurActif().getCouleur()) {
+		if(p == null || p.getCouleur() == getJoueurActif().getCouleur()) {
 			pieceSelectionne = p;
 		}
 		else {
@@ -97,6 +111,7 @@ public class Jeu {
 	
 	/**
 	  * Vérifie que le joueur courant a encore des pieces ou que sa plus petite pieces peut etre placer, sinon il ne peut plus jouer
+	  *@param j le joueur
 	  * @return true si le joueur peu continuer
 	  */
 	private boolean peutContinuerAJouer(Joueur j) {
@@ -105,17 +120,6 @@ public class Jeu {
 		ArrayList<Piece> jPiece = j.getPieces();
 		
 		if(jPiece.isEmpty()) {throw new BlokusException("Le joueur n'a plus de piece");}
-		
-		// ArrayList<Piece> parents = new ArrayList<Piece>();
-		
-		// for(Piece p : jPiece) {
-			// parentPieceRect(p,parents,jPiece);
-		// }
-		
-		// for(Piece p : parents) {
-			// System.out.println("parent id:"+p.getId());
-		// }
-		// System.out.println();
 		
 		//check les pieces parents
 		plateau.trouveEnterPossible(j.getCouleur());
@@ -166,64 +170,43 @@ public class Jeu {
 		return false;
 	}
 	
+	
 	/**
-	  * Not use
-	  */
-	private void parentPieceRect(Piece p, ArrayList<Piece> parents, ArrayList<Piece> pieces) {
-		
-		Piece pa1 = p.getParent();
-		Piece pa2 = p.getParent2();
-		
-		boolean existe1 = true;
-		boolean existe2 = true;
-		
-		if(pieces.indexOf(p) != -1) {
-			if(pa1 != null) {
-				if(pieces.indexOf(pa1) != -1) { //si pa1 est dans pieces
-					parentPieceRect(pa1,parents,pieces);
+	 * Place la piece courant, s'il y en a une, sur le plateau 
+	 * @param x coordonnée x
+	 * @param y coordonnee y
+	 */
+	public void place(int x, int y) {
+		if(pieceSelectionne != null) {
+			if(pieceSelectionne.getCouleur() == getJoueurActif().getCouleur()) {
+				if(plateau.peutPlacerPiece(pieceSelectionne,x,y)) {
+					plateau.placePiece(pieceSelectionne,x,y);
+					
+					getJoueurActif().jouerPiece(pieceSelectionne);
+					pieceSelectionne = null;
 				}
 				else {
-					existe1 = false;
+					throw new BlokusException("Ne peut pas placer la piece");
 				}
+
 			}
-			if(pa2 != null) {
-				if(pieces.indexOf(pa2) != -1) {
-					parentPieceRect(pa2,parents,pieces);
-				}
-				else {
-					existe2 = false;
-				}
+			else {
+				throw new BlokusException("La piece selectionne n'appartient pas au joueur actif");
 			}
-			
-			
-			if((existe1 && !existe2) || (!existe1 && existe2)) {
-				if(parents.indexOf(p) == -1) {
-					parents.add(p);
-				}
-			}
-			if(pa1 == null && pa2 == null) {
-				if(parents.indexOf(p) == -1) {
-					parents.add(p);
-				}
-			}
-			
+		}
+		else {
+			throw new BlokusException("Aucune piece selectionner");
 		}
 	}
-	
 	
 	/**
 	 * Place la piece courant, s'il y en a une, sur le plateau 
 	 * @param x coordonné x
 	 * @param y coordonné y
 	 */
-	public void place(int x, int y) {
+	public boolean peutPlacer(int x, int y) {
 		if(pieceSelectionne != null) {
-			if(plateau.peutPlacerPiece(pieceSelectionne,x,y)) {
-				plateau.placePiece(pieceSelectionne,x,y);
-			}
-			else {
-				throw new BlokusException("Ne peut pas placer la piece");
-			}
+			return plateau.peutPlacerPiece(pieceSelectionne,x,y);
 		}
 		else {
 			throw new BlokusException("Aucune piece selectionner");
@@ -237,7 +220,11 @@ public class Jeu {
 	public Joueur getJoueurActif() {
 		return joueurs[indiceJoueurActif];
 	}
-
+	
+	public int getIndiceJoueurActif() {
+		return indiceJoueurActif;
+	}
+	
 	public Joueur[] getJoueurs() {
 		return joueurs;
 	}
@@ -254,6 +241,13 @@ public class Jeu {
 		return tour;
 	}
 	
+	public Piece getPieceSelectionnee() {
+		return pieceSelectionne;
+	}
+	/**
+	*Lance une sequence de test en mode texte
+	*@paramargs les args
+	**/
 	public static void main(String[] args) {
 		
 		Joueur[] lesJoueurs = new Joueur[4];

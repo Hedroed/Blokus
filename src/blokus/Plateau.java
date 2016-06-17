@@ -1,17 +1,22 @@
+/**
+*Ce package contient le Modele du programme
+**/
 package blokus;
 
 import java.util.*;
 import joueur.*;
 
 import java.awt.Point;
+import java.io.Serializable;
 
 /**
   * Le Plateau contient un tableau de tout les blocks placés sur le plateau de jeu.
   * Il permet de placer une piece sur le plateau ou de savoir si on peu en placer.
+  *@implements Serializable
   */
-public class Plateau {
+public class Plateau implements Serializable{
 	
-	private final int TAILLE_PLATEAU = 20;
+	public static int TAILLE_PLATEAU = 20;
 	
 	private int[][] plateau;
 	private ArrayList<Point> entres;
@@ -68,9 +73,7 @@ public class Plateau {
 				}
 
 			}
-			// return entres;
 		}
-		// return null;
 	}
 
 	/**
@@ -211,11 +214,17 @@ public class Plateau {
 		throw new UnsupportedOperationException();
 	}
 	
-	//setter getter
+	/**
+	*Accesseur des entrees
+	*@return les entrees
+	**/
 	public ArrayList<Point> getEntres() {
 		return entres;
 	}
-	
+	/**
+	*Met les informations de l'objet sous forme de String
+	*@return un String contenant les infos
+	**/
 	public String toString() {
 		String ret = "";
 		
@@ -256,11 +265,17 @@ public class Plateau {
 		
 		return ret;
 	}
-	
+	/**
+	*Accesseur du plateau
+	*@return le plateau
+	**/
 	public int[][] getPlateau() {
 		return plateau.clone();
 	}
-	
+	/**
+	*Lance une sequence de tests en mode texte
+	*@param args les args
+	**/
 	public static void main(String[] args) {
 		
 		Plateau momPlat = new Plateau();

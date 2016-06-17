@@ -33,9 +33,9 @@ public class FenetreOptions extends AbstractPanneau{
 	
 	private Image background;
 	/**
-	*Le constructeur de la classe.
-	*@Param m , le Moteur du jeu.
-	*/
+	  * Constructeur
+	  * @param c le Controlleur
+	  */
 	public FenetreOptions(Controlleur c) {
 		super(c);
 		background = Fenetre.loadImage("options/background.png");
@@ -50,7 +50,7 @@ public class FenetreOptions extends AbstractPanneau{
 		resolutions[2] = Fenetre.loadImage("options/resolution2.png");
 		resolutions[3] = Fenetre.loadImage("options/resolution3.png");
 		resolutions[4] = Fenetre.loadImage("options/resolution4.png");
-		indReso=0;
+		indReso=1;
 		
 		itemsH = Fenetre.loadImage("options/retourOver.png");
 		bar = Fenetre.loadImage("options/bar.png");
@@ -60,16 +60,15 @@ public class FenetreOptions extends AbstractPanneau{
 		setLayout(null);
 		creeBoutons();
 		
-		setMusique(50);
-		setSon(50);
-		
 		tailleBar=(int)bar.getWidth(null);
 		coordBar= (int)((Fenetre.WIDTH)/2-(int)((bar.getWidth(null))/2));
 		
-		VolumeControlleur vc = new VolumeControlleur(this);
+		VolumeControlleur vc = new VolumeControlleur(this,control);
 		addMouseListener(vc);
 		addMouseMotionListener(vc);
 		
+		volume1 = vc.getVolumeMusic();
+		volume2 = vc.getVolumeEffet();
 	}
 	
 	/**
@@ -120,7 +119,6 @@ public class FenetreOptions extends AbstractPanneau{
 		if(indReso>=resolutions.length){
 			indReso=0;
 		}
-		retour.setActionCommand("retourOptions");
 		Image iconN = resolutions[indReso].getScaledInstance(rec2.width, rec2.height, Image.SCALE_SMOOTH);
 		bouton.setIcon(new ImageIcon(iconN));
 		repaint();
@@ -228,12 +226,6 @@ public class FenetreOptions extends AbstractPanneau{
 		return (indReso==0);
 	}
 	
-	public void resetBouton() {
-		if(retour != null) {
-			retour.setActionCommand(Fenetre.MENU);
-		}
-	}
-	
 	public int getTailleBar(){
 		return tailleBar;
 	}
@@ -255,12 +247,6 @@ public class FenetreOptions extends AbstractPanneau{
 	*Lorsque l'on quitte cet ecran
 	*/
 	public void sortie() {}
-
-	/**
-	 * Detecte les clics effectues sur ce JPanel
-	 * @param e
-	 */
-	public void mousePressed(MouseEvent e) {}
 	
 	/**
 	  * This think do its job

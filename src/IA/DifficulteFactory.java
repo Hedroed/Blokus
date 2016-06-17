@@ -21,11 +21,11 @@ public class DifficulteFactory {
 		switch(niveau) {
 			case FACILE :   ret = new Facile();
 							break;
-			case MOYEN :   ret = new Facile();
+			case MOYEN :   ret = new Moyen();
 							break;
-			case DUR :   ret = new Facile();
+			case DUR :   ret = new Dur();
 							break;
-			case EXPERT :   ret = new Facile();
+			case EXPERT :   ret = new Expert();
 							break;
 		}
 		

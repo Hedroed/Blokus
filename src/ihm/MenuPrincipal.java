@@ -20,13 +20,13 @@ public class MenuPrincipal extends AbstractPanneau {
 	private Image background;
 	
 	/**
-	*Constructeur de la classe MenuPrincipal
-	*@Param m, le moteur du jeu
-	*/
+	  * Constructeur
+	  * @param c le Controlleur
+	  */
 	public MenuPrincipal(Controlleur c) {
 		super(c);
 		
-		background = Fenetre.loadImage("menuPrincipal/background.jpg");
+		background = Fenetre.loadImage("menuPrincipal/background.png");
 		
 		items = new Image[4];
 		items[0] = Fenetre.loadImage("menuPrincipal/jouer.png");
@@ -109,22 +109,8 @@ public class MenuPrincipal extends AbstractPanneau {
 	  */
 	public void paintComponent(Graphics g) {
 		
-		// System.out.println("taille screen :"+getWidth()+"::"+getHeight());
-		
 		g.drawImage(fond,0,0,null);
-		
-		// if(itemsRect != null) {
-			
-			// System.out.println("draw items");
-			
-			// for(int i=0; i<items.length;i++) {
-				
-				// g.drawImage(items[i],itemsRect[i].x,itemsRect[i].y,itemsRect[i].width,itemsRect[i].height,null);
-				
-			// }
-			
-		// }
-		
+
 	}
 	
 	/**
@@ -136,11 +122,5 @@ public class MenuPrincipal extends AbstractPanneau {
 	*Lorsque l'on sors de cet ecran
 	*/
 	public void sortie() {}
-	
-	/**
-	 * Detecte les clics effectues sur cet ecran
-	 * @param e
-	 */
-	public void mousePressed(MouseEvent e) {}
 
 }

@@ -2,6 +2,7 @@
 import blokus.*;
 import joueur.*;
 import IA.*;
+import inout.*;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -11,16 +12,40 @@ public class BlokusEnLigne {
 	
 	public static void main(String[] args) {
 		
-		Joueur[] lesJoueurs = new Joueur[4];
-		
-		lesJoueurs[0] = new IA("Patrik",Bloc.ROUGE,DifficulteFactory.FACILE);
-		lesJoueurs[1] = new IA("Kevin",Bloc.VERT,DifficulteFactory.FACILE);
-		lesJoueurs[2] = new IA("Michel",Bloc.JAUNE,DifficulteFactory.FACILE);
-		lesJoueurs[3] = new IA("René",Bloc.BLEU,DifficulteFactory.FACILE);
-		
-		Jeu jeu = new Jeu(lesJoueurs);
-		
 		Scanner sc = new Scanner(System.in);
+		
+		Jeu jeu = null;
+		
+		System.out.println("Qu'est ce que tu vas faire ?");
+		String line = sc.nextLine();
+		while(jeu == null) {
+			
+			if(Pattern.matches("charge [0-9]*", line)) {
+				String[] param = line.split(" ");
+				
+				int nb = Integer.parseInt(param[1]);
+				
+				Chargement charge = new Chargement("sauvegarde");
+				ArrayList<SauvegardeInfo> saveInfos = charge.getFichiersSauvegardes();
+				jeu = charge.chargePartie(saveInfos.get(nb));
+				
+			}
+			else if(line.equals("nouveau")) {
+				Joueur[] lesJoueurs = new Joueur[4];
+		
+				lesJoueurs[0] = new IA("Patrik",Bloc.ROUGE,DifficulteFactory.FACILE);
+				lesJoueurs[1] = new IA("Kevin",Bloc.VERT,DifficulteFactory.FACILE);
+				lesJoueurs[2] = new IA("Michel",Bloc.JAUNE,DifficulteFactory.FACILE);
+				lesJoueurs[3] = new Joueur("René",Bloc.BLEU);
+				
+				jeu = new Jeu(lesJoueurs);
+			}
+			else {
+				line = sc.nextLine();
+			}
+			
+		}
+		
 		
 		Joueur j = null;
 		Plateau plat = null;
@@ -35,6 +60,9 @@ public class BlokusEnLigne {
 			plat.trouveEnterPossible(j.getCouleur());
 			System.out.println(plat);
 			
+			// System.out.println("vide");
+			// sc.nextLine();
+			
 			if(j.isIA()) {
 				
 				IAAction action = ((IA)j).placePiece(plat);
@@ -45,7 +73,7 @@ public class BlokusEnLigne {
 						plat.placePiece(action.getPiece(),action.getX(),action.getY());
 						j.jouerPiece(action.getPiece());
 						if(jeu.nouveauTour()) {
-							afficheScores(lesJoueurs);
+							afficheScores(jeu.getJoueurs());
 						}
 					}
 					
@@ -54,7 +82,7 @@ public class BlokusEnLigne {
 					System.out.println("L'ia "+j.getNom()+" ne peut plus jouer");
 					j.setPeutJouer(false);
 					if(jeu.nouveauTour()) {
-						afficheScores(lesJoueurs);
+						afficheScores(jeu.getJoueurs());
 					}
 				}
 				
@@ -71,7 +99,7 @@ public class BlokusEnLigne {
 				}
 				
 				System.out.println("Qu'est ce que tu vas faire ?");
-				String line = sc.nextLine();
+				line = sc.nextLine();
 				
 				if(Pattern.matches("-*[0-9]{0,2} -*[0-9]{0,2} [0-9]{0,3}", line)) {
 					
@@ -96,7 +124,7 @@ public class BlokusEnLigne {
 						plat.placePiece(pSelect,coo1,coo2);
 						j.jouerPiece(pSelect);
 						if(jeu.nouveauTour()) {
-							afficheScores(lesJoueurs);
+							afficheScores(jeu.getJoueurs());
 						}
 					}
 				}
@@ -125,6 +153,16 @@ public class BlokusEnLigne {
 					else if(rotId == 4) {
 						pSelect.miroirVerticale();
 					}
+					
+				}
+				else if(line.equals("save")) {
+					
+					
+					Sauvegarde save = new Sauvegarde("sauvegarde");
+		
+					save.sauvePartie(jeu);
+					
+					System.exit(0);
 					
 				}
 				else {

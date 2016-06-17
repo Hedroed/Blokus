@@ -16,27 +16,33 @@ import javax.imageio.ImageIO;
 */
 public class Fenetre extends JFrame{
 
-	public static final String SELECTEUR = "0";
-	public static final String MENU = "1";
-	public static final String PARTIE = "2";
-	public static final String CHARGEUR = "3";
-	public static final String OPTIONS = "4";
+	public static final String SELECTEUR = "4";
+	public static final String MENU = "0";
+	public static final String PARTIE = "3";
+	public static final String CHARGEUR = "1";
+	public static final String OPTIONS = "2";
 	
 	public static int WIDTH;
 	public static int HEIGHT;
 	
 	private AbstractPanneau[] panneaux;
 	
+	//content pane
 	private int fentreAffiche;
 	private CardLayout layout;
 	private JPanel content;
 	private String currentPanel;
 	
+	//glass pane
+	private JPanel glass;
+	private CardLayout layoutGlass;
+	private PausePanneau pausePanneau;
+	private ScorePanneau scorePanneau;
+	
 	private boolean estPleinEcran;
 	
 	/**
 	 * Constructeur de la fenetre
-	 * @param moteur, le moteur du jeu.
 	 */
 	public Fenetre() { //Moteur moteur
 		
@@ -81,6 +87,15 @@ public class Fenetre extends JFrame{
 		setContentPane(content);
 		setFenetreActive(MENU);
 		
+	
+		glass = (JPanel)getGlassPane();
+		layoutGlass = new CardLayout();
+		glass.setLayout(layoutGlass);
+		pausePanneau = new PausePanneau(c);
+		scorePanneau = new ScorePanneau(c);
+		glass.add(pausePanneau,"pause");
+		glass.add(scorePanneau,"score");
+		
 		// try {
 			// Thread.sleep(100);
 		// } catch(InterruptedException ex) {
@@ -91,7 +106,7 @@ public class Fenetre extends JFrame{
 		
 		nouvelleResolution();
 		
-		addKeyListener(new ActionClavier());
+		// addKeyListener(new ActionClavier());
 	}
 	
 	
@@ -106,13 +121,29 @@ public class Fenetre extends JFrame{
 	}
 	
 	/**
+	 * Affiche la fenetre de pause du glass panel
+	 * @param fCode
+	 */
+	public void setPausePanneauVisible(boolean b) {
+		layoutGlass.show(glass,"pause");
+		glass.setVisible(b);
+	}
+	
+	/**
+	 * Affiche la fenetre de score du glass panel
+	 * @param fCode
+	 */
+	public void setScorePanneauVisible(boolean b) {
+		layoutGlass.show(glass,"score");
+		glass.setVisible(b);
+	}
+	
+	/**
 	  * This think do its job
 	  */
 	public void nouvelleResolution() {
 		
 		FenetreOptions pan = (FenetreOptions)panneaux[2];
-		
-		System.out.println(getInsets());
 		
 		Dimension d = pan.getResolution(); //panneaux[2] est optionsPanneau
 		WIDTH = d.width;
@@ -125,11 +156,10 @@ public class Fenetre extends JFrame{
 		}
 		
 		boolean full = pan.estPleinEcran();
-		pan.resetBouton();
 		
 		if(estPleinEcran && !full) {
 			dispose();
-			setLocation((screen.width-WIDTH)/2,(screen.height-HEIGHT)/2);
+			setLocation((screen.width-WIDTH)/2,(screen.height-60-HEIGHT)/2);
 			setSize(WIDTH,HEIGHT+30);
 			setUndecorated(false);
 			setVisible(true);
@@ -144,32 +174,53 @@ public class Fenetre extends JFrame{
 			estPleinEcran = true;
 		}
 		else if(!estPleinEcran && !full) {
-			setLocation((screen.width-WIDTH)/2,(screen.height-HEIGHT)/2);
+			if(isUndecorated()) {
+				dispose();
+				setUndecorated(false);
+			}
+			setLocation((screen.width-WIDTH)/2,(screen.height-60-HEIGHT)/2);
 			setSize(WIDTH,HEIGHT+30);
+			setVisible(true);
 		}
 		
 		for(int i=0; i<panneaux.length; i++) {
 			panneaux[i].calculePositions();
 		}
 		
-	}
-	
-	/**
-	 * Detecte quand un clic est effectue dans la fenetre
-	 * @param e
-	 */
-	public void mousePressed(MouseEvent e) {
-		// TODO - implement Fenetre.mousePressed
-		throw new UnsupportedOperationException();
+		pausePanneau.calculePositions();
+		scorePanneau.calculePositions();
+		
 	}
 
 	/**
 	 * 
 	 * @param fCode
 	 */
-	public AbstractPanneau getFenetre(int fCode) {
-		// TODO - implement Fenetre.getFenetre
-		throw new UnsupportedOperationException();
+	public AbstractPanneau getFenetre(String fCode) {
+		int ind = -1;
+		try {
+			ind = Integer.parseInt(fCode);
+		}
+		catch(NumberFormatException e) {
+			e.printStackTrace();
+		}
+		
+		System.out.println("getFenetre int:"+ind+" fCode:"+fCode);
+		
+		if(ind < 0 || ind >= panneaux.length) {throw new IllegalArgumentException("indice incorrect");}
+		return panneaux[ind];
+	}
+	
+	public FenetrePartie getFenetrePartie() {
+		return ((FenetrePartie)panneaux[3]);
+	}
+	
+	public PausePanneau getPausePanneau() {
+		return pausePanneau;
+	}
+	
+	public ScorePanneau getScorePanneau() {
+		return scorePanneau;
 	}
 	
 	/**

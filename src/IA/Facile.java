@@ -9,8 +9,17 @@ import java.util.Collections;
 
 /**
   * Niveau de difficulté de l'IA Facile (niveau 1 sur 4)
+  * @implements Difficulte
   */
 public class Facile implements Difficulte {
+	
+	/**
+	*Trouve une action a réaliser par l'IA si elle peut jouer.
+	*@param plateau le plateau sur lequel on place les pièces
+	*@param pieces la liste des pieces encore presentes dans le jeu de l'IA
+	*@param c la couleur du joueur
+	*@return une IAAction contenant le mouvement a faire.
+	*/
 	
 	public IAAction placePiece(Plateau plateau, ArrayList<Piece> pieces, int c) {
 		

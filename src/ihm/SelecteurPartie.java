@@ -9,12 +9,6 @@ import java.io.IOException;
 
 public class SelecteurPartie extends AbstractPanneau {
 	
-	public static final int JOUEUR = 0;
-	public static final int IA_1 = 1;
-	public static final int IA_2 = 2;
-	public static final int IA_3 = 3;
-	public static final int IA_4 = 4;
-	
 	private JButton retourBouton;
 	private JButton jouerBouton;
 	
@@ -25,15 +19,18 @@ public class SelecteurPartie extends AbstractPanneau {
 	private Image background;
 	private Font laPolice;
 	
-	
 	private Color[] couleurs;
-	private int[] joueursType;
 	private String[] niveau;
+	private String[] type;
 	
 	private JButton[] selecteurs;
 	
 	private SelecteurControlleur selectControl;
 	
+	/**
+	  * Constructeur
+	  * @param c le Controlleur
+	  */
 	public SelecteurPartie(Controlleur c) {
 		super(c);
 		
@@ -51,7 +48,6 @@ public class SelecteurPartie extends AbstractPanneau {
 			e.printStackTrace();
 		}
 		laPolice = laPolice.deriveFont(60f);
-		System.out.println("font :"+laPolice);
 		
 		couleurs = new Color[4];
 		couleurs[0] = new Color(0,169,227);
@@ -59,11 +55,13 @@ public class SelecteurPartie extends AbstractPanneau {
 		couleurs[2] = Color.red;
 		couleurs[3] = new Color(30,254,0);
 		
-		joueursType = new int[4];
-		niveau = new String[] {"Facile","Moyen","Difficile","Expert"};
+		type = new String[] {"Joueur 1","Joueur 2","Joueur 3","Joueur 4"};
+		niveau = new String[4];
 		
 		selecteurs = new JButton[4];
+		
 		selectControl = new SelecteurControlleur(this);
+		control.setSelecteurControlleur(selectControl);
 		
 		setLayout(null);
 		creeBoutons();
@@ -88,20 +86,18 @@ public class SelecteurPartie extends AbstractPanneau {
 			double x = rec.getX();
 			double y = rec.getY();
 			
-			if(joueursType[i] == JOUEUR) {
-			
-				int len = g.getFontMetrics().stringWidth("Joueur "+i);
-				g.drawString("Joueur "+i,(int)x+((rec.width-len)/2),(int)(y+(rec.height*0.33)));
+			int len = 0;
+			if(type[i] != null) {
+				len = g.getFontMetrics().stringWidth(type[i]);
+				g.drawString(type[i],(int)x+((rec.width-len)/2),(int)(y+(rec.height*0.33)));
 			}
-			else {
 			
-				int len = g.getFontMetrics().stringWidth("I.A. "+i);
-				g.drawString("I.A. "+i,(int)x+((rec.width-len)/2),(int)(y+(rec.height*0.33)));
-				
-				len = g.getFontMetrics().stringWidth(niveau[joueursType[i]-1]);
-				g.drawString(niveau[joueursType[i]-1],(int)x+((rec.width-len)/2),(int)(y+(rec.height*0.80)));
-				
+			if(niveau[i] != null) {
+				len = g.getFontMetrics().stringWidth(niveau[i]);
+				g.drawString(niveau[i],(int)x+((rec.width-len)/2),(int)(y+(rec.height*0.80)));
 			}
+			
+			
 		}
 		
 	}
@@ -172,7 +168,7 @@ public class SelecteurPartie extends AbstractPanneau {
 		jouerBouton.setFocusable(false);
 		jouerBouton.setBorderPainted(false);
 		jouerBouton.addActionListener(control);
-		jouerBouton.setActionCommand(Fenetre.PARTIE);
+		jouerBouton.setActionCommand("nouvelle");
 		
 		this.add(jouerBouton);
 	
@@ -195,12 +191,10 @@ public class SelecteurPartie extends AbstractPanneau {
 	/**
 	  * This think do its job
 	  */
-	public void clicSelecteur(int i) {
+	public void setNoms(int i,String t, String n) {
 		if(i >= 0 && i < 4) {
-			joueursType[i]++;
-			if(joueursType[i] >= 5) {
-				joueursType[i] = 0;
-			}
+			type[i] = t;
+			niveau[i] = n;
 		}
 		repaint();
 	}
@@ -211,11 +205,5 @@ public class SelecteurPartie extends AbstractPanneau {
 	public void entree() {}
 
 	public void sortie() {}
-
-	/**
-	 * 
-	 * @param e
-	 */
-	public void mousePressed(MouseEvent e) {}
 
 }

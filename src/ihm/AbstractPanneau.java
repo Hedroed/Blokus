@@ -16,11 +16,11 @@ public abstract class AbstractPanneau extends JPanel{
 	protected Controlleur control;
 
 	/**
-	 * Constructeur
-	 * @param m le Moteur
-	 */
+	  * Constructeur
+	  * @param c le Controlleur
+	  */
 	public AbstractPanneau(Controlleur c) {
-		if(c == null) {throw new IllegalArgumentException("Controlleur null");}
+		// if(c == null) {throw new IllegalArgumentException("Controlleur null");}
 		
 		control = c;
 		
@@ -40,11 +40,5 @@ public abstract class AbstractPanneau extends JPanel{
 	  * Methode permettant de faire une transition/animation quand la fenetre disparait
 	  */
 	public abstract void sortie();
-
-	/**
-	 * Methode appeler par le moteur quand un event de souris est genener, permet de dire a la fenetre ou est ce que l'utilisateur a cliqué
-	 * @param e l'event
-	 */
-	public abstract void mousePressed(MouseEvent e);
 
 }

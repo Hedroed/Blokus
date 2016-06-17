@@ -8,6 +8,7 @@ import blokus.*;
   * Elle posséde toutes les metodes et attribut du joueur.
   * Elle posséde en plus une methode pour placer une piece sur le plateau de jeu.
   * Son attribut difficulte contient l'objet qui fera les calcule du placement de piece.
+  * @extends Joueur
   */
 public class IA extends Joueur {
 
@@ -29,6 +30,7 @@ public class IA extends Joueur {
 	/**
 	 * Place une piece parmi les pieces restantes sur le plateau, l'algorithme qui placera la piece se trouve dans l'objet Difficulte
 	 * @param p le plateau
+	 * @return une IAAction a realiser
 	 */
 	public IAAction placePiece(Plateau p) {
 		return difficulte.placePiece(p,pieces,couleur);

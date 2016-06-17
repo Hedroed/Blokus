@@ -13,10 +13,12 @@ public class PieceGraphique {
 	
 	private Image blocImage;
 	
+	private boolean visible;
+	
 	public PieceGraphique(boolean[][] pos, int couleur) {
 		
 		this.position = pos;
-		
+		this.visible = true;
 		this.couleur = couleur;
 		
 		if(couleur == Bloc.ROUGE) {
@@ -25,10 +27,10 @@ public class PieceGraphique {
 		else if(couleur == Bloc.VERT) {
 			blocImage = Fenetre.loadImage("partie/vert.png");
 		}
-		else if(couleur == Bloc.BLEU) {
+		else if(couleur == Bloc.JAUNE) {
 			blocImage = Fenetre.loadImage("partie/jaune.png");
 		}
-		else if(couleur == Bloc.JAUNE) {
+		else if(couleur == Bloc.BLEU) {
 			blocImage = Fenetre.loadImage("partie/bleu.png");
 		}
 		
@@ -36,17 +38,23 @@ public class PieceGraphique {
 	
 	public void draw(Graphics g, int x, int y,int t) {
 		
-		int taille = t/Piece.TAILLE_TABLEAU;
-		
-		for(int i=0; i<Piece.TAILLE_TABLEAU;i++) {
-			for(int j=0; j<Piece.TAILLE_TABLEAU;j++) {
-				if(position[i][j]) {
-				
-					g.drawImage(blocImage,x+(j*taille),y+(i*taille),taille,taille,null);
+		if(visible) {
+			int taille = t/Piece.TAILLE_TABLEAU;
+			
+			for(int i=0; i<Piece.TAILLE_TABLEAU;i++) {
+				for(int j=0; j<Piece.TAILLE_TABLEAU;j++) {
+					if(position[i][j]) {
 					
+						g.drawImage(blocImage,x+(j*taille),y+(i*taille),taille,taille,null);
+						
+					}
 				}
 			}
 		}
 		
+	}
+	
+	public void setVisible(boolean b) {
+		visible = b;
 	}
 }

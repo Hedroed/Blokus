@@ -1,7 +1,7 @@
 package blokus;
 
 /**
-  * Defini un bloc dans le jeu 
+  * Definit un bloc dans le jeu 
   */
 public class Bloc {
 
@@ -30,20 +30,31 @@ public class Bloc {
 		this.posY = y;
 		
 	}
-	
+	/**
+	*Constructor
+	*@param couleur la couleur du bloc
+	**/
 	public Bloc(int couleur) {
 		
 		this(couleur,0,0);
 		
 	}
-	
+	/**
+	*Determine si deux blocs sont egaux
+	*@param autre le bloc a comparer
+	*@return vrai si les blocs sont egaux, faux sinon
+	**/
 	public boolean equals(Bloc autre) {
 		
 		return this.couleur == autre.couleur;
 		
 	}
 	
-	
+	/**
+	*Determine si le bloc appartient a un joueur
+	*@param c la couleur du bloc
+	*@return vrai si oui, faux sinon
+	**/
 	public static boolean estCouleur(int c) {
 		return c >= 0 && c <= 4;
 	}
